@@ -12,7 +12,8 @@ import AnimateButton from 'ui-component/extended/AnimateButton';
 const MyButton = ({ButtonName, Color }) => {
     return (
         <AnimateButton>
-            <Button variant="contained" color={Color} sx={{ boxShadow: 'none' }} >
+            <Button variant="contained" color={Color} sx={{ boxShadow: 'none' }} 
+           >
                 {ButtonName}
             </Button>
         </AnimateButton>
