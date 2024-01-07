@@ -1,14 +1,32 @@
 // assets
-import { IconKey, IconHome2, IconGift, IconMessage, IconMoodSmileBeam, IconLockAccess } from '@tabler/icons';
+import { IconKey, IconHome2, IconGift, IconMessage, IconMoodSmileBeam, 
+  IconLockAccess, IconTruckDelivery ,IconBuildingStore , IconSettings,
+IconUser ,IconTruck,IconBell,IconPictureInPicture,
+IconCreditCard,IconGoGame,IconShieldCheck,IconFileAlert ,IconActivity ,IconAd ,IconServer} from '@tabler/icons';
+
 
 // constant
 const icons = {
+  IconServer,
   IconKey,
   IconHome2,
   IconMessage,
   IconMoodSmileBeam,
   IconLockAccess,
-  IconGift
+  IconGift,
+  IconBuildingStore,
+  IconTruckDelivery
+, IconSettings,
+IconUser ,
+IconTruck,
+IconAd,
+IconBell,
+IconPictureInPicture,
+IconCreditCard,
+IconGoGame,
+IconShieldCheck,
+IconFileAlert,
+IconActivity
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
@@ -62,7 +80,7 @@ const pages = {
       children: [
 
         {
-          id: 'register3',
+          id: 'rooms',
           title: 'Rooms',
           type: 'item',
           url: '/dashboard/rooms',
@@ -79,7 +97,7 @@ const pages = {
       children: [
 
         {
-          id: 'register4',
+          id: 'messages',
           title: 'Messages',
           type: 'item',
           url: '/dashboard/messages',
@@ -108,12 +126,12 @@ const pages = {
       id: 'openmenu',
       title: 'Shipping',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconTruck,
 
       children: [
 
         {
-          id: 'register6',
+          id: 'shipping',
           title: 'Shipping',
           type: 'item',
           url: '/dashboard/shipping',
@@ -125,12 +143,12 @@ const pages = {
       id: 'openmenu',
       title: 'Store',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconBuildingStore,
 
       children: [
 
         {
-          id: 'register7',
+          id: 'store',
           title: 'Store',
           type: 'item',
           url: '/dashboard/store',
@@ -142,12 +160,12 @@ const pages = {
       id: 'openmenu',
       title: 'Member gifts',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconGift,
 
       children: [
 
         {
-          id: 'register8',
+          id: 'memberGifts',
           title: 'Member gifts',
           type: 'item',
           url: '/dashboard/memberGifts',
@@ -159,12 +177,12 @@ const pages = {
       id: 'openmenu',
       title: 'Advertising units',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconAd,
 
       children: [
 
         {
-          id: 'register3',
+          id: 'advertisingUnits',
           title: 'Advertising units',
           type: 'item',
           url: '/dashboard/advertisingUnits',
@@ -176,12 +194,12 @@ const pages = {
       id: 'openmenu',
       title: 'Accounts',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconUser,
 
       children: [
 
         {
-          id: 'register9',
+          id: 'accounts',
           title: 'Accounts',
           type: 'item',
           url: '/dashboard/accounts',
@@ -193,12 +211,12 @@ const pages = {
       id: 'openmenu',
       title: 'Activities',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconActivity,
 
       children: [
 
         {
-          id: 'register10',
+          id: 'activities',
           title: 'Activities',
           type: 'item',
           url: '/dashboard/activities',
@@ -210,12 +228,12 @@ const pages = {
       id: 'openmenu',
       title: 'VIP Characters',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconUser,
 
       children: [
 
         {
-          id: 'register11',
+          id: 'vipCharacters',
           title: 'VIP Characters',
           type: 'item',
           url: '/dashboard/vipCharacters',
@@ -227,12 +245,12 @@ const pages = {
       id: 'openmenu',
       title: 'Room Wallpapers',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconPictureInPicture,
 
       children: [
 
         {
-          id: 'register12',
+          id: 'roomwallpapers',
           title: 'Room Wallpapers',
           type: 'item',
           url: '/dashboard/roomwallpapers',
@@ -240,16 +258,20 @@ const pages = {
         }
       ]
     },
+
+
+
+
     {
       id: 'openmenu',
       title: 'Notifications',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconBell,
 
       children: [
 
         {
-          id: 'register13',
+          id: 'notifications',
           title: 'Notifications',
           type: 'item',
           url: '/dashboard/notifications',
@@ -261,12 +283,12 @@ const pages = {
       id: 'openmenu',
       title: 'Shipping Agencies',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconTruckDelivery,
 
       children: [
 
         {
-          id: 'register14',
+          id: 'shippingagenciess',
           title: 'Shipping Agencies',
           type: 'item',
           url: '/dashboard/shippingagenciess',
@@ -278,12 +300,12 @@ const pages = {
       id: 'openmenu',
       title: 'Host Agencies',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconServer,
 
       children: [
 
         {
-          id: 'register15',
+          id: 'hostAgencies',
           title: 'Host Agencies',
           type: 'item',
           url: '/dashboard/hostAgencies',
@@ -295,12 +317,12 @@ const pages = {
       id: 'openmenu',
       title: 'Payment Gateways',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconCreditCard,
 
       children: [
 
         {
-          id: 'register16',
+          id: 'paymentGateways',
           title: 'Payment Gateways',
           type: 'item',
           url: '/dashboard/paymentGateways',
@@ -312,12 +334,12 @@ const pages = {
       id: 'openmenu',
       title: 'Games',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconGoGame,
 
       children: [
 
         {
-          id: 'register17',
+          id: 'games',
           title: 'Games',
           type: 'item',
           url: '/dashboard/games',
@@ -329,12 +351,12 @@ const pages = {
       id: 'openmenu',
       title: 'Supervision',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconShieldCheck,
 
       children: [
 
         {
-          id: 'register18',
+          id: 'supervision',
           title: 'Supervision',
           type: 'item',
           url: '/dashboard/supervision',
@@ -346,12 +368,12 @@ const pages = {
       id: 'openmenu',
       title: 'Reports',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconFileAlert,
 
       children: [
 
         {
-          id: 'register19',
+          id: 'reports',
           title: 'Reports',
           type: 'item',
           url: '/dashboard/reports',
@@ -363,12 +385,12 @@ const pages = {
       id: 'openmenu',
       title: 'Settings',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconSettings,
 
       children: [
 
         {
-          id: 'register21',
+          id: 'settings',
           title: 'Settings',
           type: 'item',
           url: '/dashboard/settings',
