@@ -15,6 +15,7 @@ import Paper from '@mui/material/Paper';
 import Table from '../pagesComponenets/Table';
 import Modal from './Modal';
 
+import { useTranslation } from 'react-i18next';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
@@ -58,29 +59,31 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-const SamplePage = () => (
+const Games = () => {
+  const { t } = useTranslation();
+
   // Open And Close Modal 
-  
-  <MainCard>
-    <Box sx={{ width: '100%' }}>
-      <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
-        <Grid>
-          <Item>
-            <h2 className="main_title_table">Games</h2>
-          </Item>
+
+  return (
+    <MainCard>
+      <Box sx={{ width: '100%' }}>
+        <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
+          <Grid>
+            <Item>
+              <h2 className="main_title_table">{t('Games')}</h2>
+            </Item>
+          </Grid>
+          <Grid >
+            <Item>
+              <Modal />
+            </Item>
+          </Grid>
         </Grid>
-        <Grid >
-          <Item>
-            <Modal />
-          </Item>
-        </Grid>
-      </Grid>
-      <Table rows={rows} columns={columns} />
+        <Table rows={rows} columns={columns} />
 
-    </Box>
+      </Box>
+    </MainCard>
+  )
+};
 
-
-  </MainCard>
-);
-
-export default SamplePage;
+export default Games;
