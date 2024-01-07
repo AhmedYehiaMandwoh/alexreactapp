@@ -66,7 +66,7 @@ const SamplePage = () => (
       <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
         <Grid>
           <Item>
-            <h2 className='main_title_table'>Reports</h2>
+            <h2 className="main_title_table">Reports</h2>
           </Item>
         </Grid>
         <Grid >

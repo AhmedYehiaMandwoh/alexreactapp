@@ -36,8 +36,7 @@ const Modal = () => {
 
             <Dialog
                 open={open}
-                fullWidth='md'
-                maxWidth='sm'
+                maxWidth='md'
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"

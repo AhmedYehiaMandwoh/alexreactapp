@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import i18n from '../i18n';
 
 // assets
 import colors from 'assets/scss/_themes-vars.module.scss';
@@ -30,9 +31,8 @@ export const theme = (customization) => {
     divider: color.grey200,
     customization
   };
-
   const themeOptions = {
-    direction: 'ltr',
+    direction: i18n.language == 'en' ? 'ltr' : 'rtl',
     palette: themePalette(themeOption),
     mixins: {
       toolbar: {
@@ -41,6 +41,15 @@ export const theme = (customization) => {
         '@media (min-width: 600px)': {
           minHeight: '48px'
         }
+      }
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1280,
+        xl: 1920
       }
     },
     typography: themeTypography(themeOption)

@@ -9,7 +9,7 @@ import LogoSection from '../LogoSection';
 import SearchSection from './SearchSection';
 import ProfileSection from './ProfileSection';
 import NotificationSection from './NotificationSection';
-
+import i18n from 'i18n';
 // assets
 import { IconMenu2 } from '@tabler/icons';
 
@@ -19,7 +19,13 @@ const Header = ({ handleLeftDrawerToggle }) => {
   const theme = useTheme();
 
   return (
-    <>
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      width: '100%',
+      alignItems: "center",
+      flexDirection: i18n.language == 'ar' ? "row-reverse" : 'row'
+    }}>
       {/* logo & toggler button */}
       <Box
         sx={{
@@ -63,7 +69,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
       {/* notification & profile */}
       <NotificationSection />
       <ProfileSection />
-    </>
+    </div>
   );
 };
 

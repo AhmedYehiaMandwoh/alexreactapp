@@ -27,7 +27,7 @@ const NavCollapse = ({ menu, level }) => {
   const handleClick = () => {
     setOpen(!open);
     setSelected(!selected ? menu.id : null);
-    if (menu?.id !== 'openmenu') {
+    if (menu?.id !== menu.id) {
       navigate(menu.children[0]?.url);
     }
   };
@@ -91,7 +91,7 @@ const NavCollapse = ({ menu, level }) => {
   );
 
   return (
-    <>
+    <div>
       <ListItemButton
         sx={{
           borderRadius: `${customization.borderRadius}px`,
@@ -146,7 +146,7 @@ const NavCollapse = ({ menu, level }) => {
           {menus}
         </List>
       </Collapse>
-    </>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import i18n from '../../../../i18n';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import {
@@ -42,6 +42,7 @@ import { IconLogout, IconSearch, IconSettings, IconUser } from '@tabler/icons';
 // ==============================|| PROFILE MENU ||============================== //
 
 const ProfileSection = () => {
+
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
   const navigate = useNavigate();
@@ -58,7 +59,10 @@ const ProfileSection = () => {
   const handleLogout = async () => {
     console.log('Logout');
   };
-
+  const lngs = {
+    en: { nativeName: 'English' },
+    ar: { nativeName: 'Arabic' }
+  };
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
@@ -245,6 +249,19 @@ const ProfileSection = () => {
                           }
                         }}
                       >
+                        {Object.keys(lngs).map((lng) => (
+                          <ListItemButton key={lng}
+                            style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }}
+                            type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                            <ListItemIcon>
+                              <IconSettings stroke={1.5} size="1.3rem" />
+                            </ListItemIcon>
+
+                            <ListItemText primary={<Typography variant="body2">{lngs[lng].nativeName}</Typography>} />
+                          </ListItemButton>
+                        ))}
+
+
                         <ListItemButton
                           sx={{ borderRadius: `${customization.borderRadius}px` }}
                           selected={selectedIndex === 0}

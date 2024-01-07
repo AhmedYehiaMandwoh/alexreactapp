@@ -13,7 +13,8 @@ import MenuList from './MenuList';
 import LogoSection from '../LogoSection';
 import MenuCard from './MenuCard';
 import { drawerWidth } from 'store/constant';
-
+import i18n from 'i18n';
+// {i18n.language == 'ar' ? 'right' : 'left'}
 // ==============================|| SIDEBAR DRAWER ||============================== //
 
 const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
@@ -62,7 +63,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
       <Drawer
         container={container}
         variant={matchUpMd ? 'persistent' : 'temporary'}
-        anchor="left"
+        anchor={i18n.language == 'ar' ? 'right' : 'left'}
         open={drawerOpen}
         onClose={drawerToggle}
         sx={{

@@ -9,7 +9,8 @@ export const initialState = {
   defaultId: 'default',
   fontFamily: config.fontFamily,
   borderRadius: config.borderRadius,
-  opened: true
+  opened: true,
+  rtlLayout: config.rtlLayout
 };
 
 // ==============================|| CUSTOMIZATION REDUCER ||============================== //
@@ -32,6 +33,12 @@ const customizationReducer = (state = initialState, action) => {
       return {
         ...state,
         fontFamily: action.fontFamily
+      };
+
+    case actionTypes.THEME_RTL:
+      return {
+        ...state,
+        rtlLayout: action.rtlLayout
       };
     case actionTypes.SET_BORDER_RADIUS:
       return {

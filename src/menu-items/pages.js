@@ -38,7 +38,7 @@ const pages = {
   type: 'group',
   children: [
     {
-      id: 'openmenu',
+      id: 'emoji',
       title: 'Emoji',
       type: 'collapse',
       icon: icons.IconMoodSmileBeam,
@@ -55,7 +55,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'prizes',
       title: 'Prizes',
       type: 'collapse',
       icon: icons.IconGift,
@@ -72,7 +72,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'rooms',
       title: 'Rooms',
       type: 'collapse',
       icon: icons.IconHome2,
@@ -89,7 +89,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'messages',
       title: 'Messages',
       type: 'collapse',
       icon: icons.IconMessage,
@@ -106,7 +106,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'blocking',
       title: 'Blocking',
       type: 'collapse',
       icon: icons.IconLockAccess,
@@ -123,7 +123,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'shipping',
       title: 'Shipping',
       type: 'collapse',
       icon: icons.IconTruck,
@@ -140,7 +140,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'store',
       title: 'Store',
       type: 'collapse',
       icon: icons.IconBuildingStore,
@@ -157,7 +157,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'memberGifts',
       title: 'Member gifts',
       type: 'collapse',
       icon: icons.IconGift,
@@ -174,7 +174,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'advertisingUnits',
       title: 'Advertising units',
       type: 'collapse',
       icon: icons.IconAd,
@@ -191,7 +191,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'accounts',
       title: 'Accounts',
       type: 'collapse',
       icon: icons.IconUser,
@@ -208,7 +208,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'activities',
       title: 'Activities',
       type: 'collapse',
       icon: icons.IconActivity,
@@ -225,7 +225,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'vipCharacters',
       title: 'VIP Characters',
       type: 'collapse',
       icon: icons.IconUser,
@@ -242,7 +242,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'roomwallpapers',
       title: 'Room Wallpapers',
       type: 'collapse',
       icon: icons.IconPictureInPicture,
@@ -263,7 +263,7 @@ const pages = {
 
 
     {
-      id: 'openmenu',
+      id: 'notifications',
       title: 'Notifications',
       type: 'collapse',
       icon: icons.IconBell,
@@ -280,7 +280,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'shippingagenciess',
       title: 'Shipping Agencies',
       type: 'collapse',
       icon: icons.IconTruckDelivery,
@@ -297,7 +297,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'hostAgencies',
       title: 'Host Agencies',
       type: 'collapse',
       icon: icons.IconServer,
@@ -314,7 +314,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'paymentGateways',
       title: 'Payment Gateways',
       type: 'collapse',
       icon: icons.IconCreditCard,
@@ -331,7 +331,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'games',
       title: 'Games',
       type: 'collapse',
       icon: icons.IconGoGame,
@@ -348,7 +348,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'supervision',
       title: 'Supervision',
       type: 'collapse',
       icon: icons.IconShieldCheck,
@@ -365,7 +365,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'reports',
       title: 'Reports',
       type: 'collapse',
       icon: icons.IconFileAlert,
@@ -382,7 +382,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'settings',
       title: 'Settings',
       type: 'collapse',
       icon: icons.IconSettings,
@@ -399,7 +399,7 @@ const pages = {
       ]
     },
     {
-      id: 'openmenu',
+      id: 'login3',
       title: 'Authentication',
       type: 'collapse',
       icon: icons.IconKey,

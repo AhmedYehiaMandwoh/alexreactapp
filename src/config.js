@@ -5,7 +5,7 @@ const config = {
   defaultPath: '/dashboard/default',
   fontFamily: `'Roboto', sans-serif`,
   borderRadius: 5,
-  // rtlLayout: true
+  rtlLayout: true
 };
 
 export default config;
