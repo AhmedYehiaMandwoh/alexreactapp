@@ -6,6 +6,8 @@ import { useLocation, useNavigate } from 'react-router';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Collapse, List, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18n';
 
 // project imports
 import NavItem from '../NavItem';
@@ -18,6 +20,8 @@ import { IconChevronDown, IconChevronUp } from '@tabler/icons';
 
 const NavCollapse = ({ menu, level }) => {
   const theme = useTheme();
+  const { t } = useTranslation();
+
   const customization = useSelector((state) => state.customization);
   const navigate = useNavigate();
 
@@ -97,6 +101,7 @@ const NavCollapse = ({ menu, level }) => {
           borderRadius: `${customization.borderRadius}px`,
           mb: 0.5,
           alignItems: 'flex-start',
+          flexDirection: i18n.language == 'ar' ? "row-reverse" : 'row',
           backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
           py: level > 1 ? 1 : 1.25,
           pl: `${level * 24}px`
@@ -106,9 +111,14 @@ const NavCollapse = ({ menu, level }) => {
       >
         <ListItemIcon sx={{ my: 'auto', minWidth: !menu.icon ? 18 : 36 }}>{menuIcon}</ListItemIcon>
         <ListItemText
+        style={{
+          textAlign: i18n.language == 'ar' ? "right" : 'left',
+          marginRight: i18n.language == 'ar' ? "15px" : 'auto',
+
+        }}
           primary={
             <Typography variant={selected === menu.id ? 'h5' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
-              {menu.title}
+              {t(`${menu.title}`)}
             </Typography>
           }
           secondary={
@@ -142,6 +152,7 @@ const NavCollapse = ({ menu, level }) => {
               background: theme.palette.primary.light
             }
           }}
+      
         >
           {menus}
         </List>

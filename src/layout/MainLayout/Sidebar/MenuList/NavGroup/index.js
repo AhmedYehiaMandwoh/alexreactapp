@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Divider, List, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 // project imports
 import NavItem from '../NavItem';
@@ -12,6 +13,7 @@ import NavCollapse from '../NavCollapse';
 
 const NavGroup = ({ item }) => {
   const theme = useTheme();
+  const { t } = useTranslation();
 
   // menu list collapse & items
   const items = item.children?.map((menu) => {
@@ -35,7 +37,8 @@ const NavGroup = ({ item }) => {
         subheader={
           item.title && (
             <Typography variant="caption" sx={{ ...theme.typography.menuCaption }} display="block" gutterBottom>
-              {item.title}
+                       {t(`${item.title}`)}
+
               {item.caption && (
                 <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
                   {item.caption}

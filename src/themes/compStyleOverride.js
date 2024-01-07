@@ -1,3 +1,4 @@
+import i18n from "i18n";
 export default function componentStyleOverrides(theme) {
   const bgColor = theme.colors?.grey50;
   return {
@@ -36,7 +37,8 @@ export default function componentStyleOverrides(theme) {
     MuiCardContent: {
       styleOverrides: {
         root: {
-          padding: '24px'
+          padding: '24px',
+          direction: i18n.language == 'en' ? 'ltr' : 'rtl'
         }
       }
     },
@@ -103,6 +105,7 @@ export default function componentStyleOverrides(theme) {
       styleOverrides: {
         root: {
           background: bgColor,
+          marginRight: i18n.language == 'en' ? 'auto' : '16px',
           borderRadius: `${theme?.customization?.borderRadius}px`,
           '& .MuiOutlinedInput-notchedOutline': {
             borderColor: theme.colors?.grey400
