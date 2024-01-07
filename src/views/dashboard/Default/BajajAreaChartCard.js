@@ -11,10 +11,11 @@ import Chart from 'react-apexcharts';
 
 // project imports
 import chartData from './chart-data/bajaj-area-chart';
-
+import { useTranslation } from 'react-i18next';
 // ===========================|| DASHBOARD DEFAULT - BAJAJ AREA CHART CARD ||=========================== //
 
 const BajajAreaChartCard = () => {
+  const { t } = useTranslation();
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
   const { navType } = customization;
@@ -51,7 +52,7 @@ const BajajAreaChartCard = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="subtitle2" sx={{ color: theme.palette.grey[800] }}>
-            10% Profit
+            10%{t('Profit')}
           </Typography>
         </Grid>
       </Grid>

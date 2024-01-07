@@ -17,8 +17,9 @@ import GetAppTwoToneIcon from '@mui/icons-material/GetAppOutlined';
 import FileCopyTwoToneIcon from '@mui/icons-material/FileCopyOutlined';
 import PictureAsPdfTwoToneIcon from '@mui/icons-material/PictureAsPdfOutlined';
 import ArchiveTwoToneIcon from '@mui/icons-material/ArchiveOutlined';
-
+import { useTranslation } from 'react-i18next';
 const CardWrapper = styled(MainCard)(({ theme }) => ({
+
   backgroundColor: theme.palette.secondary.dark,
   color: '#fff',
   overflow: 'hidden',
@@ -57,6 +58,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
 // ===========================|| DASHBOARD DEFAULT - EARNING CARD ||=========================== //
 
 const EarningCard = ({ isLoading }) => {
+  const { t } = useTranslation();
   const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -167,7 +169,7 @@ const EarningCard = ({ isLoading }) => {
                     color: theme.palette.secondary[200]
                   }}
                 >
-                  Total Earning
+                  {t('Total Earning')}
                 </Typography>
               </Grid>
             </Grid>

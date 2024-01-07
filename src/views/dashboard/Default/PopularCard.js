@@ -16,10 +16,11 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-
+import { useTranslation } from 'react-i18next';
 // ==============================|| DASHBOARD DEFAULT - POPULAR CARD ||============================== //
 
 const PopularCard = ({ isLoading }) => {
+  const { t } = useTranslation();
   const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -43,7 +44,7 @@ const PopularCard = ({ isLoading }) => {
               <Grid item xs={12}>
                 <Grid container alignContent="center" justifyContent="space-between">
                   <Grid item>
-                    <Typography variant="h4">Popular Stocks</Typography>
+                    <Typography variant="h4">{t('Popular Stocks')}</Typography>
                   </Grid>
                   <Grid item>
                     <MoreHorizOutlinedIcon
@@ -72,9 +73,9 @@ const PopularCard = ({ isLoading }) => {
                         horizontal: 'right'
                       }}
                     >
-                      <MenuItem onClick={handleClose}> Today</MenuItem>
-                      <MenuItem onClick={handleClose}> This Month</MenuItem>
-                      <MenuItem onClick={handleClose}> This Year </MenuItem>
+                      <MenuItem onClick={handleClose}> {t('Today')} </MenuItem>
+                      <MenuItem onClick={handleClose}>{t('This Month')}</MenuItem>
+                      <MenuItem onClick={handleClose}>{t('This Year')} </MenuItem>
                     </Menu>
                   </Grid>
                 </Grid>
@@ -119,7 +120,7 @@ const PopularCard = ({ isLoading }) => {
                   </Grid>
                   <Grid item>
                     <Typography variant="subtitle2" sx={{ color: 'success.dark' }}>
-                      10% Profit
+                      10%{t('Profit')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -160,7 +161,7 @@ const PopularCard = ({ isLoading }) => {
                   </Grid>
                   <Grid item>
                     <Typography variant="subtitle2" sx={{ color: theme.palette.orange.dark }}>
-                      10% loss
+                      10%{t('loss')} 
                     </Typography>
                   </Grid>
                 </Grid>
@@ -201,7 +202,7 @@ const PopularCard = ({ isLoading }) => {
                   </Grid>
                   <Grid item>
                     <Typography variant="subtitle2" sx={{ color: theme.palette.success.dark }}>
-                      10% Profit
+                      10% {t('Profit')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -242,7 +243,7 @@ const PopularCard = ({ isLoading }) => {
                   </Grid>
                   <Grid item>
                     <Typography variant="subtitle2" sx={{ color: theme.palette.orange.dark }}>
-                      10% loss
+                      10% {t('Profit')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -283,7 +284,7 @@ const PopularCard = ({ isLoading }) => {
                   </Grid>
                   <Grid item>
                     <Typography variant="subtitle2" sx={{ color: theme.palette.orange.dark }}>
-                      10% loss
+                      10% {t('loss')}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -292,7 +293,7 @@ const PopularCard = ({ isLoading }) => {
           </CardContent>
           <CardActions sx={{ p: 1.25, pt: 0, justifyContent: 'center' }}>
             <Button size="small" disableElevation>
-              View All
+            {t('View All')}
               <ChevronRightOutlinedIcon />
             </Button>
           </CardActions>
