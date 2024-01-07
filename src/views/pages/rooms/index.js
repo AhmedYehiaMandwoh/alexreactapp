@@ -1,5 +1,6 @@
 
 // material-ui
+import React from 'react'
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
@@ -12,7 +13,7 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../pagesComponenets/Table';
-import Button from '../pagesComponenets/MyButton';
+import Modal from './Modal';
 
 
 // ==============================|| SAMPLE PAGE ||============================== //
@@ -58,6 +59,8 @@ const rows = [
 ];
 
 const SamplePage = () => (
+  // Open And Close Modal 
+  
   <MainCard>
     <Box sx={{ width: '100%' }}>
       <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
@@ -68,8 +71,7 @@ const SamplePage = () => (
         </Grid>
         <Grid >
           <Item>
-            <Button ButtonName='Add New' color='primary' />
-
+            <Modal />
           </Item>
         </Grid>
       </Grid>

@@ -1,10 +1,13 @@
 // assets
-import { IconKey, IconHome2, IconGift } from '@tabler/icons';
+import { IconKey, IconHome2, IconGift, IconMessage, IconMoodSmileBeam, IconLockAccess } from '@tabler/icons';
 
 // constant
 const icons = {
   IconKey,
   IconHome2,
+  IconMessage,
+  IconMoodSmileBeam,
+  IconLockAccess,
   IconGift
 };
 
@@ -20,7 +23,7 @@ const pages = {
       id: 'openmenu',
       title: 'Emoji',
       type: 'collapse',
-      icon: icons.IconGift,
+      icon: icons.IconMoodSmileBeam,
 
       children: [
 
@@ -71,7 +74,7 @@ const pages = {
       id: 'openmenu',
       title: 'Messages',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconMessage,
 
       children: [
 
@@ -88,12 +91,12 @@ const pages = {
       id: 'openmenu',
       title: 'Blocking',
       type: 'collapse',
-      icon: icons.IconHome2,
+      icon: icons.IconLockAccess,
 
       children: [
 
         {
-          id: 'register5',
+          id: 'blocking',
           title: 'Blocking',
           type: 'item',
           url: '/dashboard/blocking',
