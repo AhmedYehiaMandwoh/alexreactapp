@@ -7,7 +7,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import AnimateButton from 'ui-component/extended/AnimateButton';
-const top100Films = [
+const data = [
     { label: 'The Shawshank Redemption', year: 1994 },
     { label: 'The Godfather', year: 1972 },
     { label: 'The Godfather: Part II', year: 1974 },
@@ -49,7 +49,7 @@ const Modal = () => {
                     <Autocomplete
                         disablePortal
                         id="combo-box-demo"
-                        options={top100Films}
+                        options={data}
                         renderInput={(params) => <TextField {...params} label="Movie" />}
                     />
                     <TextField id="outlined-basic" label="Outlined" variant="outlined" />
