@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "hello_from": "Welcome to React and react-i18next",
     "Emoji": "Emoji",
       "Rooms": "Rooms ",
@@ -55,58 +54,3 @@
   
     
   }
-=======
-  "Rooms" : "Rooms",
-  "Room Wallpaper" : "Room Wallpaper",
-  "Emoji" : "Emoji",
-  "Prizes" : "Prizes",
-  "Messages" : "Messages",
-  "Blocking" : "Blocking",
-  "Shipping" : "Shipping",
-  "Store" : "Store",
-  "Member gifts" : "Member gifts",
-  "Advertising units" : "Advertising units",
-  "Accounts" : "Accounts",
-  "Pages" : "Pages",
-  "Dashboard" : "Dashboard",
-  "Sample Page" : "Sample Page",
-  "Typography" : "Typography",
-  "Documentation" : "Documentation",
-  "Material Icons" : "Material Icons",
-  "Popular Stocks" : "Popular Stocks",
-  "Today" : "Today",
-  "This Month" : "This Month",
-  "This Year" : "This Year",
-  "Month" : "Month",
-  "Year" : "Year",
-  "View All" : "View All",
-  "loss" : "loss",
-  "Jan" : "Jan",
-  "Total Income" : "Total Income",
-  "Total Growth" : "Total Growth",
-  "Total Order" : "Total Order",
-  "Total Earning" : "Total Earning",
-  "Profit" : "Profit",
-  "Activities" : "Activities",
-  "VIP Characters" : "VIP Characters",
-  "Room Wallpapers" : "Room Wallpapers",
-  "Notifications" : "Notifications",
-  "Shipping Agencies" : "Shipping Agencies",
-  "Host Agencies" : "Host Agencies",
-  "Payment Gateways" : "Payment Gateways",
-  "Games" : "Games",
-  "Supervision" : "Supervision",
-  "Reports" : "Reports",
-  "Settings" : "Settings",
-  "Authentication" : "Authentication",
-  "Login" : "Login",
-  "Register" : "Register",
-  "Color" : "Color",
-  "Shadow" : "Shadow",
-  "Icons" : "Icons",
-  "Tabler Icons" : "Tabler Icons",
-  "Utilities" : "Utilities"
-  }
-
-  
->>>>>>> ecef349d6b3785490fd96548787deefdd7a9c9b9
