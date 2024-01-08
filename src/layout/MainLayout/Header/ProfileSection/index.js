@@ -252,7 +252,7 @@ const ProfileSection = () => {
                         {Object.keys(lngs).map((lng) => (
                           <ListItemButton key={lng}
                             style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }}
-                            type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                            type="submit" onClick={() => {i18n.changeLanguage(lng), window.location.reload()}}>
                             <ListItemIcon>
                               <IconSettings stroke={1.5} size="1.3rem" />
                             </ListItemIcon>
