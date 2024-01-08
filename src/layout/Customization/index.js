@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -5,47 +6,47 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTheme } from '@mui/material/styles';
 import {
   Drawer,
-  // Fab,
   FormControl,
   FormControlLabel,
   Grid,
-  // IconButton,
   Radio,
   RadioGroup,
   Slider,
-  // Tooltip,
   Typography
 } from '@mui/material';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+
+import {  SET_FONT_FAMILY } from 'store/actions';
+import { gridSpacing } from 'store/constant';
+
+import { useTranslation } from 'react-i18next';
 // import { IconSettings } from '@tabler/icons';
 
 // third-party
-import PerfectScrollbar from 'react-perfect-scrollbar';
+
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
 // import AnimateButton from 'ui-component/extended/AnimateButton';
-import { SET_BORDER_RADIUS, SET_FONT_FAMILY } from 'store/actions';
-import { gridSpacing } from 'store/constant';
+import { SET_BORDER_RADIUS } from 'store/actions';
+
 
 // concat 'px'
 function valueText(value) {
   return `${value}px`;
 }
 
+
 // ==============================|| LIVE CUSTOMIZATION ||============================== //
 
+
+
 const Customization = () => {
+  const { i18n } = useTranslation();
   const theme = useTheme();
   const dispatch = useDispatch();
   const customization = useSelector((state) => state.customization);
-
-  // drawer on/off
-  const [open, setOpen] = useState(false);
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-  // state - border radius
+    // state - border radius
   const [borderRadius, setBorderRadius] = useState(customization.borderRadius);
   const handleBorderRadius = (event, newValue) => {
     setBorderRadius(newValue);
@@ -55,39 +56,34 @@ const Customization = () => {
     dispatch({ type: SET_BORDER_RADIUS, borderRadius });
   }, [dispatch, borderRadius]);
 
-  let initialFont;
-  switch (customization.fontFamily) {
-    case `'Inter', sans-serif`:
-      initialFont = 'Inter';
-      break;
-    case `'Poppins', sans-serif`:
-      initialFont = 'Poppins';
-      break;
-    case `'Roboto', sans-serif`:
-    default:
-      initialFont = 'Roboto';
-      break;
-  }
 
   // state - font family
-  const [fontFamily, setFontFamily] = useState(initialFont);
-  useEffect(() => {
-    let newFont;
-    switch (fontFamily) {
-      case 'Inter':
-        newFont = `'Inter', sans-serif`;
-        break;
-      case 'Poppins':
-        newFont = `'Poppins', sans-serif`;
-        break;
-      case 'Roboto':
+  const [fontFamily, setFontFamily] = useState(() => {
+    // Choose initial font based on language
+    switch (i18n.language) {
+      case 'ar':
+        return 'Cairo, sans-serif'; // Set Arabic font
+        case 'en':
+          return 'Inter,Poppins,Roboto, sans-serif';
       default:
-        newFont = `'Roboto', sans-serif`;
-        break;
+        return customization.fontFamily; // Use default font for other languages
     }
-    dispatch({ type: SET_FONT_FAMILY, fontFamily: newFont });
+  });
+
+  // drawer on/off
+  const [open, setOpen] = useState(false);
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
+
+
+  useEffect(() => {
+    // Update Redux state with the selected font family
+    dispatch({ type: SET_FONT_FAMILY, fontFamily });
   }, [dispatch, fontFamily]);
 
+  
   return (
     <>
       {/* toggle button */}
@@ -124,7 +120,8 @@ const Customization = () => {
         open={open}
         PaperProps={{
           sx: {
-            width: 280
+            width: 280,
+            fontFamily: i18n.language === 'ar' ? 'Cairo, sans-serif' : customization.fontFamily
           }
         }}
       >

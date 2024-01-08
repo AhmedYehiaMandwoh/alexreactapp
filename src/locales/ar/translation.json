@@ -18,6 +18,8 @@
     "Documentation":"توثيق",
     "Material Icons":"ايقونات Material",
     "Popular Stocks":"الاسهم الشعبية",
+    "Maintenance":"صيانة",
+    "Investment":"استثمر",
     "Add New":"اضافة جديد",
     "Today":"اليوم",
     "This Month":"هذا الشهر",
@@ -51,6 +53,17 @@
     "Shadow":"ظل",
     "Icons":"ايقونات",
     "Tabler Icons":" ايقونات Tabler",
-    "Utilities":"خدمات"
+    "Utilities":"خدمات",
+     "Feb":"فبراير",
+      "Mar":"مارس", 
+      "Apr":"ابريل", 
+      "May":"مايو",
+       "Jun":"يونيه", 
+       "Jul":"يوليو",
+        "Aug":"اغسطس", 
+        "Sep":"سبتمبر", 
+        "Oct":"اكتوبر",
+         "Nov":"نوفمبر", 
+         "Dec":"ديسمبر"
 
   }
