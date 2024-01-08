@@ -30,6 +30,9 @@ const Settings = Loadable(lazy(() => import('views/pages/settings')));
 const Departments = Loadable(lazy(() => import('views/pages/emoji/departments')));
 const Symbols = Loadable(lazy(() => import('views/pages/emoji/symbols')));
 const AllEmoji = Loadable(lazy(() => import('views/pages/emoji/allEmoji')));
+const DepartmentsPrizes = Loadable(lazy(() => import('views/pages/prizes/departments')));
+const Prize = Loadable(lazy(() => import('views/pages/prizes/prizes')));
+const AllPrizes = Loadable(lazy(() => import('views/pages/prizes/allPrizes')));
 
 
 // utilities routing
@@ -154,6 +157,18 @@ const MainRoutes = {
         {
           path: 'allEmoji',
           element: <AllEmoji />
+        },
+        {
+          path: 'departmentsPrizes',
+          element: <DepartmentsPrizes />
+        },
+        {
+          path: 'prize',
+          element: <Prize />
+        },
+        {
+          path: 'allPrizes',
+          element: <AllPrizes />
         },
         
       ]

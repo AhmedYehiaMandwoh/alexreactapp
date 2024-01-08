@@ -42,18 +42,13 @@ const Modal = () => {
                     {"Add new"}
                 </DialogTitle>
                 <DialogContent>
+                 <div style={{ marginBottom: '10px' }}>
+                 <TextField id="outlined-basic" label="Prize Name" variant="outlined" />
+                 </div>
                    <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Name" variant="outlined" />
+                   <TextField id="outlined-basic" label="Actions" variant="outlined" />
                    </div>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Department" variant="outlined" />
-                   </div>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Price" variant="outlined" />
-                   </div>
-                    
-                    
-                    
+                   
 
                 </DialogContent>
                 <DialogActions>

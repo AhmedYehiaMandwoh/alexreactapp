@@ -95,12 +95,27 @@ const pages = {
       children: [
 
         {
-          id: 'prizes',
-          title: 'Prizes',
+          id: 'departmentsPrizes',
+          title: 'Departments',
           type: 'item',
-          url: '/dashboard/prizes',
+          url: '/dashboard/departmentsPrizes',
           target: false
-        }
+        },
+        {
+          id: 'prizes',
+          title: ' Prizes',
+          type: 'item',
+          url: '/dashboard/prize',
+          target: false
+        },
+        {
+          id: 'allPrizes',
+          title: 'All Prizes',
+          type: 'item',
+          url: '/dashboard/allPrizes',
+          target: false
+        },
+        
       ]
     },
     {

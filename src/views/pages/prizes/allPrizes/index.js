@@ -12,7 +12,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 
-import Table from '../pagesComponenets/Table';
+import Table from '../../pagesComponenets/Table';
 import Modal from './Modal';
 
 import { useTranslation } from 'react-i18next';
@@ -28,38 +28,25 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+  { field: 'prizeName', headerName: 'Prize Name', width: 130 },
+  { field: 'actions', headerName: 'Actions', width: 130 },
+
+ 
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, actions: 'Snow', prizeName: 'Jon', age: 35 },
+  { id: 2, actions: 'Lannister', prizeName: 'Cersei', age: 42 },
+  { id: 3, actions: 'Lannister', prizeName: 'Jaime', age: 45 },
+  { id: 4, actions: 'Stark', prizeName: 'Arya', age: 16 },
+  { id: 5, actions: 'Targaryen', prizeName: 'Daenerys', age: null },
+  { id: 6, actions: 'Melisandre', prizeName: null, age: 150 },
+  { id: 7, actions: 'Clifford', prizeName: 'Ferrara', age: 44 },
+  { id: 8, actions: 'Frances', prizeName: 'Rossini', age: 36 },
+  { id: 9, actions: 'Roxie', prizeName: 'Harvey', age: 65 },
 ];
 
-const Prizes = () => {
+const Emoji = () => {
   const { t } = useTranslation();
 
   // Open And Close Modal 
@@ -70,7 +57,7 @@ const Prizes = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Reports')}</h2>
+              <h2 className="main_title_table">{t('All Prizes')}</h2>
             </Item>
           </Grid>
           <Grid >
@@ -86,4 +73,4 @@ const Prizes = () => {
   )
 };
 
-export default Prizes;
+export default Emoji;
