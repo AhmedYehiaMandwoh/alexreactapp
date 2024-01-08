@@ -7,6 +7,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import AnimateButton from 'ui-component/extended/AnimateButton';
+import { useTranslation } from 'react-i18next';
 const data = [
     { label: 'The Shawshank Redemption', year: 1994 },
     { label: 'The Godfather', year: 1972 },
@@ -15,6 +16,7 @@ const data = [
 ];
 // Add and Update functions
 const Modal = () => {
+    const { t } = useTranslation();
     const [open, setOpen] = useState(false);
 
     // open = false
@@ -30,13 +32,12 @@ const Modal = () => {
         <>
             <AnimateButton>
                 <Button variant="contained" onClick={handleClickOpen}>
-                    Add New
+                {t('Add New')}
                 </Button>
             </AnimateButton>
 
             <Dialog
                 open={open}
-                fullWidth={true}
                 maxWidth='sm'
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
