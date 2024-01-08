@@ -1365,6 +1365,11 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.1.6.tgz"
   integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
 
+"@fontsource/cairo@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.npmjs.org/@fontsource/cairo/-/cairo-5.0.18.tgz"
+  integrity sha512-tZP6ymkCcfKR8a7wchakfHGxJ2FJtL4EPVS+5NYk7b0OiKv2QclogAjZ55YzquUg6ZOIR3mc8DVhtlxhX0oP+w==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"

@@ -1,7 +1,7 @@
 // assets
 import { IconKey, IconHome2, IconGift, IconMessage, IconMoodSmileBeam, 
   IconLockAccess, IconTruckDelivery ,IconBuildingStore , IconSettings,
-IconUser ,IconTruck,IconBell,IconPictureInPicture,
+IconUser ,IconTruck,IconBell,IconPictureInPicture,IconDashboard,
 IconCreditCard,IconGoGame,IconShieldCheck,IconFileAlert ,IconActivity ,IconAd ,IconServer} from '@tabler/icons';
 
 
@@ -17,6 +17,7 @@ const icons = {
   IconBuildingStore,
   IconTruckDelivery
 , IconSettings,
+IconDashboard,
 IconUser ,
 IconTruck,
 IconAd,
@@ -33,10 +34,27 @@ IconActivity
 
 const pages = {
   id: 'pages',
-  title: 'Pages',
-  caption: 'Pages Caption',
+//   title: 'Pages',
+  // caption: 'Pages Caption',
   type: 'group',
   children: [
+    {
+      id: 'dashboard',
+      title: 'Dashboard',
+      type: 'collapse',
+      icon: icons.IconDashboard,
+
+      children: [
+
+        {
+          id: 'dashboard',
+          title: 'statistics',
+          type: 'item',
+          url: '/dashboard/statistics',
+          target: false
+        }
+      ]
+    },
     {
       id: 'emoji',
       title: 'Emoji',
