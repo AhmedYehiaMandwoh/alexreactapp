@@ -27,6 +27,10 @@ const Games = Loadable(lazy(() => import('views/pages/games')));
 const Supervision = Loadable(lazy(() => import('views/pages/supervision')));
 const Reports = Loadable(lazy(() => import('views/pages/reports')));
 const Settings = Loadable(lazy(() => import('views/pages/settings')));
+const Departments = Loadable(lazy(() => import('views/pages/emoji/departments')));
+const Symbols = Loadable(lazy(() => import('views/pages/emoji/symbols')));
+const AllEmoji = Loadable(lazy(() => import('views/pages/emoji/allEmoji')));
+
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -139,6 +143,19 @@ const MainRoutes = {
           path: 'settings',
           element: <Settings />
         },
+        {
+          path: 'departments',
+          element: <Departments />
+        },
+        {
+          path: 'symbols',
+          element: <Symbols />
+        },
+        {
+          path: 'allEmoji',
+          element: <AllEmoji />
+        },
+        
       ]
     },
     {

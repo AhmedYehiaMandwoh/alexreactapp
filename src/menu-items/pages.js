@@ -64,10 +64,24 @@ const pages = {
       children: [
 
         {
-          id: 'emoji',
-          title: 'Emoji',
+          id: 'departments',
+          title: 'Departments',
           type: 'item',
-          url: '/dashboard/emoji',
+          url: '/dashboard/departments',
+          target: false
+        },
+        {
+          id: 'symbols',
+          title: 'Symbols',
+          type: 'item',
+          url: '/dashboard/symbols',
+          target: false
+        },
+        {
+          id: 'allEmoji',
+          title: 'AllEmoji',
+          type: 'item',
+          url: '/dashboard/allEmoji',
           target: false
         }
       ]
