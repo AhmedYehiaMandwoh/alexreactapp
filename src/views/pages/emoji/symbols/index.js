@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 130 },
-  { field: 'department', headerName: 'Department', width: 130 },
+  { field: 'department', headerName: 'Departments', width: 130 },
   {
     field: 'price',
     headerName: 'Price',
@@ -71,7 +71,7 @@ const Emoji = () => {
             </Item>
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns} />
+        <Table rows={rows} columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))} />
 
       </Box>
     </MainCard>

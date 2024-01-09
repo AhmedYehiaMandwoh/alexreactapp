@@ -9,8 +9,10 @@ import DialogTitle from '@mui/material/DialogTitle';
 import AnimateButton from 'ui-component/extended/AnimateButton';
 import { useTranslation } from 'react-i18next';
 
+
 // Add and Update functions
 const Modal = () => {
+   
     const { t } = useTranslation();
     const [open, setOpen] = useState(false);
 
@@ -25,31 +27,37 @@ const Modal = () => {
 
     return (
         <>
+         
             <AnimateButton>
                 <Button variant="contained" onClick={handleClickOpen}>
                 {t('Add New')}
                 </Button>
             </AnimateButton>
-
+         
+        
             <Dialog
                 open={open}
-                maxWidth='sm'
+               
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+             
+               
             >
                 <DialogTitle id="alert-dialog-title">
-                    {"Add new"}
+                {t('Add new')}
                 </DialogTitle>
-                <DialogContent>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Name" variant="outlined" />
+                <DialogContent 
+                
+                >
+                   <div style={{ marginBottom: '10px' , width: '500px'}}>
+                   <TextField id="outlined-basic" label={t("Name")} variant="outlined"    sx={{ width: '100%' }}/>
                    </div>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Department" variant="outlined" />
+                   <div style={{ marginBottom: '10px' , width: '500px' }}>
+                   <TextField id="outlined-basic" label={t("Department")} variant="outlined" sx={{ width: '100%' }}/>
                    </div>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Price" variant="outlined" />
+                   <div style={{ marginBottom: '10px' , width: '500px'}}>
+                   <TextField id="outlined-basic" label={t("Price")} variant="outlined" sx={{ width: '100%' }}/>
                    </div>
                     
                     
@@ -57,12 +65,13 @@ const Modal = () => {
 
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleClose}>{t('Cancel')}</Button>
                     <Button onClick={handleClose} autoFocus>
-                        Submit
+                        {t('Submit')}
                     </Button>
                 </DialogActions>
             </Dialog>
+            
         </>
     )
 }

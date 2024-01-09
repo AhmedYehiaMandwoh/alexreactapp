@@ -103,7 +103,7 @@ const pages = {
         },
         {
           id: 'prizes',
-          title: ' Prizes',
+          title: 'Prizes',
           type: 'item',
           url: '/dashboard/prize',
           target: false

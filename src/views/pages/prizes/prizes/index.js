@@ -71,7 +71,7 @@ const Emoji = () => {
             </Item>
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns} />
+        <Table rows={rows} columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))} />
 
       </Box>
     </MainCard>

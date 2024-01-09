@@ -39,22 +39,22 @@ const Modal = () => {
                 aria-describedby="alert-dialog-description"
             >
                 <DialogTitle id="alert-dialog-title">
-                    {"Add new"}
+                {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
-                 <div style={{ marginBottom: '10px' }}>
-                 <TextField id="outlined-basic" label="Emoji Name" variant="outlined" />
+                 <div style={{ marginBottom: '10px' , width: '500px' }}>
+                 <TextField id="outlined-basic" label={t('Emoji Name')} variant="outlined" sx={{ width: '100%' }}/>
                  </div>
-                   <div style={{ marginBottom: '10px' }}>
-                   <TextField id="outlined-basic" label="Actions" variant="outlined" />
+                   <div style={{ marginBottom: '10px' , width: '500px'}}>
+                   <TextField id="outlined-basic" label={t('Actions')} variant="outlined" sx={{ width: '100%' }}/>
                    </div>
                    
 
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleClose}>{t('Cancel')}</Button>
                     <Button onClick={handleClose} autoFocus>
-                        Submit
+                    {t('Submit')}
                     </Button>
                 </DialogActions>
             </Dialog>

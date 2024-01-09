@@ -4,6 +4,7 @@
       "Rooms": "Rooms ",
       "Room Wallpaper":"Room Wallpaper" ,
       "Prizes":"Prizes",
+      "Price":"Price",
       "Messages":"Messages",
       "Blocking":"Blocking",
       "Shipping":"Shipping",
@@ -53,11 +54,21 @@
       "Utilities":"Utilities",
       "statistics ":"statistics ",
       "Departments":"Departments",
+      "Department":"Departments",
       "Symbols":" Symbols",
       "AllEmoji":"AllEmoji  ",
       "Emoji Name":" Emoji Name",
       "Add New":"Add New",
-      "All Prizes":"All Prizes"
+      "All Prizes":"All Prizes",
+      "ID":"ID",
+      "Submit":"Submit",
+      "Cancel":"Cancel",
+      "Actions":"Actions",
+      "Add new":"Add new",
+      "Membership No":"Membership No",
+      "Membership NO":"Membership NO",
+      "Name":"Name"
+      
   
     
   }
