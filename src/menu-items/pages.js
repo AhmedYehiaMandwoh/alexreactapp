@@ -127,10 +127,24 @@ const pages = {
       children: [
 
         {
-          id: 'rooms',
-          title: 'Rooms',
+          id: 'createARoom',
+          title: 'Create A Room',
           type: 'item',
-          url: '/dashboard/rooms',
+          url: '/dashboard/createARoom',
+          target: false
+        },
+        {
+          id: 'roomEditing',
+          title: 'Room Editing',
+          type: 'item',
+          url: '/dashboard/roomEditing',
+          target: false
+        },
+        {
+          id: 'showRooms',
+          title: 'Show Rooms',
+          type: 'item',
+          url: '/dashboard/showRooms',
           target: false
         }
       ]
@@ -144,10 +158,17 @@ const pages = {
       children: [
 
         {
-          id: 'messages',
-          title: 'Messages',
+          id: 'userMessages',
+          title: 'User Messages',
           type: 'item',
-          url: '/dashboard/messages',
+          url: '/dashboard/userMessages',
+          target: false
+        },
+        {
+          id: 'welcomeMessages',
+          title: 'Welcome Messages',
+          type: 'item',
+          url: '/dashboard/welcomeMessages',
           target: false
         }
       ]
@@ -161,10 +182,10 @@ const pages = {
       children: [
 
         {
-          id: 'blocking',
-          title: 'Blocking',
+          id: 'userMessages',
+          title: 'User Messages',
           type: 'item',
-          url: '/dashboard/blocking',
+          url: '/dashboard/userMessages',
           target: false
         }
       ]
@@ -178,10 +199,39 @@ const pages = {
       children: [
 
         {
-          id: 'shipping',
-          title: 'Shipping',
+          id: 'shippingValues',
+          title: 'Shipping Values',
           type: 'item',
-          url: '/dashboard/shipping',
+          url: '/dashboard/shippingValues',
+          target: false
+        },
+        {
+          id: 'editAddShippingValue',
+          title: 'Edit Add Shipping Value',
+          type: 'item',
+          url: '/dashboard/editAddShippingValue',
+          target: false
+        },
+      
+        {
+          id: 'shippingOffers',
+          title: 'Shipping Offers',
+          type: 'item',
+          url: '/dashboard/shippingOffers',
+          target: false
+        },
+        {
+          id: 'editAddShippingOffers',
+          title: 'Edit Add Shipping Offers',
+          type: 'item',
+          url: '/dashboard/editAddShippingOffers',
+          target: false
+        },
+        {
+          id: 'rechargeWithdrawBalance',
+          title: 'Recharge Withdraw Balance',
+          type: 'item',
+          url: '/dashboard/rechargeWithdrawBalance',
           target: false
         }
       ]
@@ -195,10 +245,38 @@ const pages = {
       children: [
 
         {
-          id: 'store',
-          title: 'Store',
+          id: 'storeDepartments',
+          title: 'Store Departments',
           type: 'item',
-          url: '/dashboard/store',
+          url: '/dashboard/storeDepartments',
+          target: false
+        },
+        {
+          id: 'editAddDepartments',
+          title: 'Edit Add Departments',
+          type: 'item',
+          url: '/dashboard/editAddDepartments',
+          target: false
+        },
+        {
+          id: 'products',
+          title: 'Products',
+          type: 'item',
+          url: '/dashboard/products',
+          target: false
+        },
+        {
+          id: 'editAddProducts',
+          title: 'Edit Add Products',
+          type: 'item',
+          url: '/dashboard/editAddProducts',
+          target: false
+        },
+        {
+          id: 'rechargeWithdrawBalance',
+          title: 'Recharge Withdraw Balance',
+          type: 'item',
+          url: '/dashboard/rechargeWithdrawBalance',
           target: false
         }
       ]
@@ -212,10 +290,10 @@ const pages = {
       children: [
 
         {
-          id: 'memberGifts',
-          title: 'Member gifts',
+          id: 'sendingGifts',
+          title: 'Sending Gifts',
           type: 'item',
-          url: '/dashboard/memberGifts',
+          url: '/dashboard/sendingGifts',
           target: false
         }
       ]
@@ -229,10 +307,17 @@ const pages = {
       children: [
 
         {
-          id: 'advertisingUnits',
-          title: 'Advertising units',
+          id: 'units',
+          title: 'Units',
           type: 'item',
-          url: '/dashboard/advertisingUnits',
+          url: '/dashboard/units',
+          target: false
+        },
+        {
+          id: 'createModifyUnit',
+          title: 'Create Modify Unit',
+          type: 'item',
+          url: '/dashboard/createModifyUnit',
           target: false
         }
       ]
@@ -251,6 +336,20 @@ const pages = {
           type: 'item',
           url: '/dashboard/accounts',
           target: false
+        },
+        {
+          id: 'accountsEditing',
+          title: 'Accounts Editing',
+          type: 'item',
+          url: '/dashboard/accountsEditing',
+          target: false
+        },
+        {
+          id: 'accountReport',
+          title: 'Account Report',
+          type: 'item',
+          url: '/dashboard/accountReport',
+          target: false
         }
       ]
     },
@@ -263,10 +362,10 @@ const pages = {
       children: [
 
         {
-          id: 'activities',
-          title: 'Activities',
+          id: 'addEditingActivities',
+          title: 'Add Editing Activities',
           type: 'item',
-          url: '/dashboard/activities',
+          url: '/dashboard/addEditingActivities',
           target: false
         }
       ]
@@ -280,10 +379,10 @@ const pages = {
       children: [
 
         {
-          id: 'vipCharacters',
-          title: 'VIP Characters',
+          id: 'addVipAccount',
+          title: 'Add VIP Account ',
           type: 'item',
-          url: '/dashboard/vipCharacters',
+          url: '/dashboard/addVipAccount',
           target: false
         }
       ]
@@ -297,10 +396,24 @@ const pages = {
       children: [
 
         {
-          id: 'roomwallpapers',
-          title: 'Room Wallpapers',
+          id: 'departmentWallpapers',
+          title: 'Department Wallpapers',
           type: 'item',
-          url: '/dashboard/roomwallpapers',
+          url: '/dashboard/departmentWallpapers',
+          target: false
+        },
+        {
+          id: 'wallpapers',
+          title: 'Wallpapers',
+          type: 'item',
+          url: '/dashboard/wallpapers',
+          target: false
+        },
+        {
+          id: 'addEditingWallpapers',
+          title: 'Add Editing Wallpapers',
+          type: 'item',
+          url: '/dashboard/addEditingWallpapers',
           target: false
         }
       ]
@@ -318,10 +431,17 @@ const pages = {
       children: [
 
         {
-          id: 'notifications',
-          title: 'Notifications',
+          id: 'activityNotifications',
+          title: 'Activity Notifications',
           type: 'item',
-          url: '/dashboard/notifications',
+          url: '/dashboard/activityNotifications',
+          target: false
+        },
+        {
+          id: 'sendNotification',
+          title: 'Send Notification',
+          type: 'item',
+          url: '/dashboard/sendNotification',
           target: false
         }
       ]
@@ -335,10 +455,17 @@ const pages = {
       children: [
 
         {
-          id: 'shippingagenciess',
-          title: 'Shipping Agencies',
+          id: 'addAgencies',
+          title: 'Add Agencies',
           type: 'item',
-          url: '/dashboard/shippingagenciess',
+          url: '/dashboard/addAgencies',
+          target: false
+        },
+        {
+          id: 'agencieReports',
+          title: 'Agencie Reports',
+          type: 'item',
+          url: '/dashboard/agencieReports',
           target: false
         }
       ]
@@ -352,10 +479,17 @@ const pages = {
       children: [
 
         {
-          id: 'hostAgencies',
-          title: 'Host Agencies',
+          id: 'addAgenciess',
+          title: 'Add Agencies',
           type: 'item',
-          url: '/dashboard/hostAgencies',
+          url: '/dashboard/addAgencies',
+          target: false
+        },
+        {
+          id: 'agencieReportss',
+          title: 'Agencie Reports',
+          type: 'item',
+          url: '/dashboard/agencieReports',
           target: false
         }
       ]

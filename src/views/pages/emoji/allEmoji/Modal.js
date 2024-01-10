@@ -43,10 +43,10 @@ const Modal = () => {
                 </DialogTitle>
                 <DialogContent>
                  <div style={{ marginBottom: '10px' , width: '500px' }}>
-                 <TextField id="outlined-basic" label={t('Emoji Name')} variant="outlined" sx={{ width: '100%' }}/>
+                 <TextField id="outlined-basic" label={t('Emoji Name')} variant="outlined"sx={{ width: '100%' }}/>
                  </div>
                    <div style={{ marginBottom: '10px' , width: '500px'}}>
-                   <TextField id="outlined-basic" label={t('Actions')} variant="outlined" sx={{ width: '100%' }}/>
+                   <TextField id="outlined-basic" label={t('Actions')} variant="outlined"sx={{ width: '100%' }}/>
                    </div>
                    
 

@@ -69,6 +69,33 @@
     "Shadow":"ظل",
     "Icons":"ايقونات",
     "Tabler Icons":" ايقونات Tabler",
+    "Shipping Values":"قيم الشحن",
+    "Edit Add Shipping Value":"تعديل واضافة قيمة الشحن ",
+    "Shipping Offers":"عروض الشحن",
+    "Edit Add Shipping Offers":"تعديل عروض الشحن",
+    "Recharge Withdraw Balance":"شحن -سحب رصيد",
+    "Store Departments":"اقسام المتجر",
+    "Edit Add Departments":"تعديل- اضافة اقسام",
+    "Products":"المنتجات",
+    "Edit Add Products":"تعديل- اضافة منتجات",
+   
+    "Sending Gifts":"ارسال الجوائز",
+    
+    "Units":"الوحدات",
+    "Create Modify Unit":"انشاء -تعديل الوحدة",
+    
+    "Accounts Editing":"تعديل الحسابات",
+    "Account Report":"تقارير الحسابات",
+    "Add Editing Activities":"اضافة - تعديل نشاط",
+    "Add VIP Account ":"اضافه حساب VIP",
+    "Department Wallpapers":"اقسام الخلفيات",
+    "Wallpapers":"خلفيات",
+    "Add Editing Wallpapers":"اضافه -تعديل الخلفيات",
+    "Activity Notifications":"نشاط الاشعارات",
+    "Send Notification":"ارسال اشعار",
+    
+    "Add Agencies":"اضاقة وكالة",
+    "Agencie Reports":"تقارير الوكالات",
     "Utilities":"خدمات",
      "Feb":"فبراير",
       "Mar":"مارس", 
@@ -80,6 +107,12 @@
         "Sep":"سبتمبر", 
         "Oct":"اكتوبر",
          "Nov":"نوفمبر", 
-         "Dec":"ديسمبر"
+         "Dec":"ديسمبر",
+        
+         "Welcome Messages":"رساله ترحيبية ",
+         "User Messages":"رسائل للمستخدم",
+         "Create A Room":"انشاء غرفة",
+         "Show Rooms":"عرض الغرف",
+         "Room Editing":"تعديل الغرفه"
 
   }
