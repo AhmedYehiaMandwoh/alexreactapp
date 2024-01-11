@@ -191,7 +191,13 @@ const pages = {
       icon: icons.IconTruck,
 
       children: [
-
+        {
+          id: 'shippingActivities',
+          title: 'Shipping Activity',
+          type: 'item',
+          url: '/dashboard/shippingActivities',
+          target: false
+        },
         {
           id: 'shippingValues',
           title: 'Shipping Values',

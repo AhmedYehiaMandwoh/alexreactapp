@@ -65,6 +65,8 @@ const AddAgencies = Loadable(lazy(() => import('views/pages/shippingAgenciess/ad
 const AgencieReports = Loadable(lazy(() => import('views/pages/shippingAgenciess/agencieReports')));
 const AddAgenciess = Loadable(lazy(() => import('views/pages/hostAgencies/addAgencies')));
 const AgencieReportss = Loadable(lazy(() => import('views/pages/hostAgencies/agencieReports')));
+const ShippingActivities = Loadable(lazy(() => import('views/pages/shipping/shippingActivity')));
+
 
 
 
@@ -154,6 +156,10 @@ const MainRoutes = {
         {
           path: 'shipping',
           element: <Shipping />
+        },
+        {
+          path: 'shippingActivities',
+          element: <ShippingActivities />
         },
         {
           path: 'store',
