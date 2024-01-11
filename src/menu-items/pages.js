@@ -133,16 +133,10 @@ const pages = {
           url: '/dashboard/createARoom',
           target: false
         },
-        {
-          id: 'roomEditing',
-          title: 'Room Editing',
-          type: 'item',
-          url: '/dashboard/roomEditing',
-          target: false
-        },
+       
         {
           id: 'showRooms',
-          title: 'Show Rooms',
+          title: 'All Rooms',
           type: 'item',
           url: '/dashboard/showRooms',
           target: false

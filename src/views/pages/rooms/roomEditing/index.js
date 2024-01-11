@@ -13,7 +13,6 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../../pagesComponenets/Table';
-import Modal from './Modal';
 
 import { useTranslation } from 'react-i18next';
 
@@ -75,7 +74,6 @@ const Rooms = () => {
           </Grid>
           <Grid >
             <Item>
-              <Modal />
             </Item>
           </Grid>
         </Grid>
