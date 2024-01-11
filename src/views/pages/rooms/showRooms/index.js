@@ -13,7 +13,6 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../../pagesComponenets/Table';
-import Modal from './Modal';
 
 import { useTranslation } from 'react-i18next';
 
@@ -73,11 +72,7 @@ const Rooms = () => {
               <h2 className="main_title_table">{t('Rooms')}</h2>
             </Item>
           </Grid>
-          <Grid >
-            <Item>
-              <Modal />
-            </Item>
-          </Grid>
+         
         </Grid>
         <Table rows={rows} columns={columns} />
 
