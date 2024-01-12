@@ -66,6 +66,8 @@ const AgencieReports = Loadable(lazy(() => import('views/pages/shippingAgenciess
 const AddAgenciess = Loadable(lazy(() => import('views/pages/hostAgencies/addAgencies')));
 const AgencieReportss = Loadable(lazy(() => import('views/pages/hostAgencies/agencieReports')));
 const ShippingActivities = Loadable(lazy(() => import('views/pages/shipping/shippingActivity')));
+const StoreActivity = Loadable(lazy(() => import('views/pages/store/storeActivity')));
+
 
 
 
@@ -165,6 +167,11 @@ const MainRoutes = {
           path: 'store',
           element: <Store />
         },
+        {
+          path: 'storeActivity',
+          element: <StoreActivity />
+        },
+        
         {
           path: 'memberGifts',
           element: <MemberGifts />
@@ -323,7 +330,7 @@ const MainRoutes = {
           element: <EditAddProducts />
         },
         {
-          path: 'rechargeWithdrawBalance',
+          path: 'rechargeWithdrawBalancee',
           element: <RechargeWithdrawBalancee />
         },
         {

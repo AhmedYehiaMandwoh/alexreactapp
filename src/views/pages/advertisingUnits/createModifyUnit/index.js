@@ -13,7 +13,7 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../../pagesComponenets/Table';
-import Modal from './Modal';
+
 
 import { useTranslation } from 'react-i18next';
 
@@ -28,35 +28,27 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'name', headerName: 'Name', width: 130 },
+  { field: 'image', headerName: 'Image', width: 130 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
+    field: 'referralLink',
+    headerName: 'Referral Link',
+
+    width: 130,
   },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, image: 'Snow', name: 'Jon', referralLink: 35 },
+  { id: 2, image: 'Lannister', name: 'Cersei', referralLink: 42 },
+  { id: 3, image: 'Lannister', name: 'Jaime', referralLink: 45 },
+  { id: 4, image: 'Stark', name: 'Arya', referralLink: 16 },
+  { id: 5, image: 'Targaryen', name: 'Daenerys', referralLink: null },
+  { id: 6, image: 'Melisandre', name: null, referralLink: 150 },
+  { id: 7, image: 'Clifford', name: 'Ferrara', referralLink: 44 },
+  { id: 8, image: 'Frances', name: 'Rossini', referralLink: 36 },
+  { id: 9, image: 'Roxie', name: 'Harvey', referralLink: 65 },
 ];
 
 const AdvertisingUnits = () => {
@@ -70,16 +62,14 @@ const AdvertisingUnits = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Advertising units')}</h2>
+              <h2 className="main_title_table">{t('Create and Modify Unit')}</h2>
             </Item>
           </Grid>
           <Grid >
-            <Item>
-              <Modal />
-            </Item>
+           
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns} />
+        <Table rows={rows}   columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))}/>
 
       </Box>
     </MainCard>

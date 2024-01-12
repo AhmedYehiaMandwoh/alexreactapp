@@ -252,6 +252,13 @@ const pages = {
           target: false
         },
         {
+          id: 'storeActivity',
+          title: 'Store Activity',
+          type: 'item',
+          url: '/dashboard/storeActivity',
+          target: false
+        },
+        {
           id: 'editAddDepartments',
           title: 'Edit Add Departments',
           type: 'item',
@@ -273,10 +280,10 @@ const pages = {
           target: false
         },
         {
-          id: 'rechargeWithdrawBalance',
+          id: 'rechargeWithdrawBalancee',
           title: 'Recharge Withdraw Balance',
           type: 'item',
-          url: '/dashboard/rechargeWithdrawBalance',
+          url: '/dashboard/rechargeWithdrawBalancee',
           target: false
         }
       ]

@@ -133,6 +133,23 @@
          "User Messages":"رسائل للمستخدم",
          "Create A Room":"انشاء غرفة",
          "Show Rooms":"عرض الغرف",
-         "Room Editing":"تعديل الغرفه"
+         "Room Editing":"تعديل الغرفه",
+
+
+         "Add and Edit Products":"تعديل واضافة منتجات",
+         "Store Department":"اقسام المتجر",
+         "Store Activity":"نشاط المتجر",
+         "Add and Edit Store Departments":"تعديل واضافة اقسام المتجر",
+         "Department Name":"اسم القسم",
+         "Membership Type":"نوع العضوية",
+         "Product Image":"صورة المنتج",
+         "Product Price":"سعر المنتج",
+         "Product Name":"اسم المنتج",
+         "Referral Link":"رابط الاحالة",
+         "Create and Modify Unit":"انشاء-تعديل الوحدة"
+        
+       
+        
+         
 
   }

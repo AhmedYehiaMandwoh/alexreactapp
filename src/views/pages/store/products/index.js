@@ -1,6 +1,5 @@
-
 // material-ui
-import React from 'react'
+import React from 'react';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
@@ -10,7 +9,6 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 
 import Paper from '@mui/material/Paper';
-
 
 import Table from '../../pagesComponenets/Table';
 import Modal from './Modal';
@@ -24,45 +22,50 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.secondary
 }));
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'productName', headerName: 'Product Name', width: 130 },
+  { field: 'productPrice', headerName: 'Product Price', width: 130 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
+    field: 'productImage',
+    headerName: 'Product Image',
+
+    width: 130
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    field: 'department',
+    headerName: 'Department',
+
+    width: 130
   },
+  {
+    field: 'membershipType',
+    headerName: 'Membership Type',
+
+    width: 130
+  },
+  {
+    field: 'offerValue',
+    headerName: 'Offer Value',
+
+    width: 130
+  }
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+  { id: 1, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 1, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 2, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 3, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 4, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 5, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 }];
 
 const Store = () => {
   const { t } = useTranslation();
 
-  // Open And Close Modal 
+  // Open And Close Modal
 
   return (
     <MainCard>
@@ -70,20 +73,19 @@ const Store = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Store')}</h2>
+              <h2 className="main_title_table">{t('Products')}</h2>
             </Item>
           </Grid>
-          <Grid >
+          <Grid>
             <Item>
               <Modal />
             </Item>
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns} />
-
+        <Table rows={rows} columns={columns.map((col) => ({ ...col, headerName: t(col.headerName) }))} />
       </Box>
     </MainCard>
-  )
+  );
 };
 
 export default Store;
