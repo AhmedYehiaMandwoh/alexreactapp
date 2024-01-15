@@ -42,6 +42,7 @@ const Modal = () => {
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                dir={direction}
             >
                 <DialogTitle id="alert-dialog-title">
                     {"Use Google's location service?"}

@@ -28,7 +28,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 const Rooms = () => {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -47,45 +47,44 @@ const Rooms = () => {
               <h2 className="main_title_table">{t('Create a Room')}</h2>
             </Item>
           </Grid>
-          <Grid >
-            <Item sx={{ display: 'flex', flexWrap: 'wrap' }}>
-                <AnimateButton>
-          <Button variant="outlined" sx={{ margin: '0 15px' }} onClick={() =>navigate(-1)}>{t('Back')}</Button>
-        </AnimateButton>
-        <AnimateButton>
-          <Button variant="contained">{t('Create')}</Button>
-        </AnimateButton>
-            </Item>
-          </Grid>
+         
         </Grid>
-   
 
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-          <div>
-            <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount">{t('Name')}</InputLabel>
-              <FilledInput id="filled-adornment-name" />
-            </FormControl>
-            <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount">{t('Upload Image')}</InputLabel>
-              <FilledInput id="filled-adornment-image" type="file" startAdornment={<InputAdornment position="start">📷</InputAdornment>} />
-            </FormControl>
-            <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount">{t('Room advertisement')}</InputLabel>
-              <FilledInput id="filled-adornment-ad" />
+    <div>
+        <FormControl fullWidth sx={{ m: 1, justifyContent: i18n.language === 'ar' ? 'flex-start' : 'flex-start' }} variant="filled">
+            <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>
+                {t('Name')}
+            </InputLabel>
+            <FilledInput id="filled-adornment-name" />
+        </FormControl>
+
+        <FormControl fullWidth sx={{ m: 1 }} variant="filled">
+            <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>
+                {t('Upload Image')}
+            </InputLabel>
+            <FilledInput
+                id="filled-adornment-image"
+                type="file"
+                startAdornment={<InputAdornment position="start">📷</InputAdornment>}
+            />
+        </FormControl>
+        <FormControl fullWidth sx={{ m: 1 }} variant="filled">
+              <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Room advertisement')}</InputLabel>
+              <FilledInput id="filled-adornment-ad"  />
             </FormControl>
 
             <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount">{t('Room type')}</InputLabel>
+              <InputLabel htmlFor="filled-adornment-amount"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Room type')}</InputLabel>
               <FilledInput id="filled-adornment-room" />
             </FormControl>
             <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-password">{t('Password')}</InputLabel>
+              <InputLabel htmlFor="filled-adornment-password"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Password')}</InputLabel>
               <FilledInput
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
                 endAdornment={
-                  <InputAdornment position="end">
+                  <InputAdornment position="start">
                     <IconButton
                       aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
@@ -97,8 +96,22 @@ const Rooms = () => {
                 }
               />
             </FormControl>
-          </div>
-        </Box>
+
+        {/* Other FormControl components... */}
+
+    </div>
+</Box>
+
+        <Grid >
+            <Item sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: i18n.language === 'ar' ? 'flex-end' : 'flex-end' }}>
+                <AnimateButton>
+          <Button variant="outlined" sx={{ margin: '0 15px' }} onClick={() =>navigate(-1)}>{t('Back')}</Button>
+        </AnimateButton>
+        <AnimateButton>
+          <Button variant="contained">{t('Create')}</Button>
+        </AnimateButton>
+            </Item>
+          </Grid>
       </Box>
     </MainCard>
   );

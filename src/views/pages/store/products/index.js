@@ -56,10 +56,10 @@ const columns = [
 
 const rows = [
   { id: 1, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
-{ id: 1, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
 { id: 2, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
 { id: 3, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
 { id: 4, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
+{ id: 6, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 },
 { id: 5, productName: 'Snow', productPrice: 'Jon', productImage: 35, department: 35, membershipType: 35, offerValue: 35 }];
 
 const Store = () => {

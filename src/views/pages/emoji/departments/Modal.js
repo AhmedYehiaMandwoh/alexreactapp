@@ -1,8 +1,13 @@
+
+
+
 import { React, useState } from 'react'
+import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import TextField from '@mui/material/TextField';
 
+import InputLabel from '@mui/material/InputLabel';
+import FilledInput from '@mui/material/FilledInput';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -11,7 +16,7 @@ import { useTranslation } from 'react-i18next';
 
 // Add and Update functions
 const Modal = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
 
     // open = false
@@ -22,6 +27,7 @@ const Modal = () => {
     const handleClose = () => {
         setOpen(false);
     };
+    const direction = i18n.language === 'ar' ? 'rtl' : 'ltr';
 
     return (
         <>
@@ -37,18 +43,48 @@ const Modal = () => {
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                dir={direction}
             >
                 <DialogTitle id="alert-dialog-title">
                 {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
-                 <div style={{ marginBottom: '10px' , width: '500px'}}>
-                 <TextField id="outlined-basic" label={t('Name')} variant="outlined" sx={{ width: '100%' }}/>
-                 </div>
-                   <div style={{ marginBottom: '10px' , width: '500px' }}>
-                   <TextField id="outlined-basic" label={t('Membership No')} variant="outlined" sx={{ width: '100%' }}/>
-                   </div>
-                   
+                <div style={{ marginBottom: '10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
+                      
+                      <FormControl fullWidth sx={{width: '50%'}} variant="outlined">
+                      <InputLabel htmlFor="outlined-adornment-name" sx={{
+                                  direction: direction,
+                                  position: 'absolute',
+                                  left: direction === 'rtl' ? 'auto' : 0,
+                                  right: direction === 'rtl' ? 25 : 'auto',
+                                  width: '48%',
+                                  
+                              }}>
+                          {t('Name')}
+                      </InputLabel>
+                      <FilledInput id="outlined-adornment-name" />
+                  </FormControl>
+                  <FormControl fullWidth sx={{width: '48%' }} variant="outlined">
+                      <InputLabel htmlFor="outlined-adornment-name" sx={{
+                                  direction: direction,
+                                  position: 'absolute',
+                                  left: direction === 'rtl' ? 'auto' : 0,
+                                  right: direction === 'rtl' ? 25 : 'auto',
+                                  
+                              }}>
+                          {t('Membership No')}
+                      </InputLabel>
+                      <FilledInput id="outlined-adornment-link" />
+                  </FormControl>
+                     
+                  </div>
+                  
+               
+                  
+                  
+                    
+                    
+                    
 
                 </DialogContent>
                 <DialogActions>
