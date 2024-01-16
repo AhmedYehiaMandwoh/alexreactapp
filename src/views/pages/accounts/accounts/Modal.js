@@ -59,7 +59,7 @@ const Modal = () => {
                                   width: '48%',
                                   
                               }}>
-                          {t('Emoji Name')}
+                          {t('Name')}
                       </InputLabel>
                       <FilledInput id="outlined-adornment-name" />
                   </FormControl>
@@ -71,7 +71,7 @@ const Modal = () => {
                                   right: direction === 'rtl' ? 25 : 'auto',
                                   
                               }}>
-                          {t('Actions')}
+                          {t('Membership Type')}
                       </InputLabel>
                       <FilledInput id="outlined-adornment-link" />
                   </FormControl>

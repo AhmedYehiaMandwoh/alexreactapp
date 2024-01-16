@@ -30,26 +30,32 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 130 },
-  { field: 'department', headerName: 'Departments', width: 130 },
+  { field: 'department', headerName: 'Department', width: 130 },
   {
     field: 'price',
     headerName: 'Price',
     type: 'number',
-    width: 90,
+    width: 130,
+  },
+  {
+    field: 'image',
+    headerName: 'Image',
+    
+    width: 130,
   },
 
 ];
 
 const initialRows = [
-  { id: 1, name: 'Snow', department: 'Jon', price: 35 },
-  { id: 2, name: 'Lannister', department: 'Cersei', price: 42 },
-  { id: 3, name: 'Lannister', department: 'Jaime', price: 45 },
-  { id: 4, name: 'Stark', department: 'Arya', price: 16 },
-  { id: 5, name: 'Targaryen', department: 'Daenerys', price: null },
-  { id: 6, name: 'Melisandre', department: null, price: 150 },
-  { id: 7, name: 'Clifford', department: 'Ferrara', price: 44 },
-  { id: 8, name: 'Frances', department: 'Rossini', price: 36 },
-  { id: 9, name: 'Roxie', department: 'Harvey', price: 65 },
+  { id: 1, name: 'Snow', department: 'Jon', price: 35,image:'Image' },
+  { id: 2, name: 'Lannister', department: 'Cersei', price: 42 ,image:'Image'},
+  { id: 3, name: 'Lannister', department: 'Jaime', price: 45 ,image:'Image'},
+  { id: 4, name: 'Stark', department: 'Arya', price: 16 ,image:'Image'},
+  { id: 5, name: 'Targaryen', department: 'Daenerys', price: null ,image:'Image'},
+  { id: 6, name: 'Melisandre', department: null, price: 150,image:'Image' },
+  { id: 7, name: 'Clifford', department: 'Ferrara', price: 44,image:'' },
+  { id: 8, name: 'Frances', department: 'Rossini', price: 36,image:'' },
+  { id: 9, name: 'Roxie', department: 'Harvey', price: 65 ,image:''},
 ];
 
 const Emoji = () => {

@@ -42,7 +42,7 @@ const Modal = () => {
                 aria-describedby="alert-dialog-description"
                 dir={direction}
             >
-                <DialogTitle id="alert-dialog-title">
+                <DialogTitle id="alert-dialog-title" sx={{marginBottom:'10px'}}>
                 {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
@@ -50,7 +50,7 @@ const Modal = () => {
                  <TextField id="outlined-basic" label={t('Department Name')} variant="outlined"sx={{ width: '100%' }}/>
                  </div> */}
                   
-                 <div style={{ marginBottom: '10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
+                 <div style={{ marginBottom: '10px',marginTop:'10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
                       
                       <FormControl fullWidth sx={{width: '100%'}} variant="outlined">
                       <InputLabel htmlFor="outlined-adornment-name" sx={{

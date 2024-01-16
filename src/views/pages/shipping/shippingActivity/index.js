@@ -1,6 +1,7 @@
 
-// material-ui
-import React from 'react'
+import React, { useState } from 'react';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
@@ -47,7 +48,7 @@ const columns = [
   },
 ];
 
-const rows = [
+const initialRows = [
   { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
   { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
   { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
@@ -61,6 +62,26 @@ const rows = [
 
 const Shipping = () => {
   const { t } = useTranslation();
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [rows, setRows] = useState(initialRows);
+  
+  const handleEdit = (rowData) => {
+    // Handle edit action here, e.g., open a modal for editing
+     console.log('Edit:', rowData);
+    navigate("/dashboard/createARoom");
+  };
+
+  const handleDelete = (rowData) => {
+    // Handle delete action here, e.g., show a confirmation dialog
+    console.log('Delete:', rowData);
+
+    // Update the state to remove the deleted item
+    setRows((prevRows) => prevRows.filter((row) => row.id !== rowData.id));
+  };
+
+  const handleRowSelect = (rowId) => {
+    setSelectedRow(rowId);
+  };
 
   // Open And Close Modal 
 
@@ -79,7 +100,16 @@ const Shipping = () => {
             </Item>
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))} />
+        <Table
+          rows={rows}
+          columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))}
+          selectedRow={selectedRow}
+          onRowSelect={handleRowSelect}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          editIcon={<EditIcon />}
+          deleteIcon={<DeleteIcon />}
+        />
 
       </Box>
     </MainCard>

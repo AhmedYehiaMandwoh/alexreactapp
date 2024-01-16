@@ -143,30 +143,7 @@ const pages = {
         }
       ]
     },
-    // {
-    //   id: 'messages',
-    //   title: 'Messages',
-    //   type: 'collapse',
-    //   icon: icons.IconMessage,
-
-    //   children: [
-
-    //     {
-    //       id: 'userMessages',
-    //       title: 'User Messages',
-    //       type: 'item',
-    //       url: '/dashboard/userMessages',
-    //       target: false
-    //     },
-    //     {
-    //       id: 'welcomeMessages',
-    //       title: 'Welcome Messages',
-    //       type: 'item',
-    //       url: '/dashboard/welcomeMessages',
-    //       target: false
-    //     }
-    //   ]
-    // },
+   
     {
       id: 'messages',
       title: 'Messages',
@@ -174,17 +151,17 @@ const pages = {
       icon: icons.IconMessage,
       children: [
         {
-          id: 'welcomeMessages',
-          title: 'Welcome Messages',
-          type: 'item',
-          url: '/dashboard/welcomeMessages',
+          id: 'userMessages',
+          title: 'User Messages',
+          type: 'collapse',
+          url: '/dashboard/userMessages',
           target: false,
           children: [
             {
-              id: 'userMessages',
-              title: 'User Messages',
+              id: 'welcomeMessages',
+              title: 'Welcome Messages',
               type: 'item',
-              url: '/dashboard/userMessages',
+              url: '/dashboard/welcomeMessages',
               target: false
             }
           ]
@@ -205,46 +182,6 @@ const pages = {
           title: 'User Messages',
           type: 'item',
           url: '/dashboard/userMessages',
-          target: false
-        }
-      ]
-    },
-    {
-      id: 'shipping',
-      title: 'Shipping',
-      type: 'collapse',
-      icon: icons.IconTruck,
-
-      children: [
-        {
-          id: 'shippingActivities',
-          title: 'Shipping Activity',
-          type: 'item',
-          url: '/dashboard/shippingActivities',
-          target: false
-        },
-        {
-          id: 'shippingValues',
-          title: 'Shipping Values',
-          type: 'item',
-          url: '/dashboard/shippingValues',
-          target: false
-        },
-       
-      
-        {
-          id: 'shippingOffers',
-          title: 'Shipping Offers',
-          type: 'item',
-          url: '/dashboard/shippingOffers',
-          target: false
-        },
-        
-        {
-          id: 'rechargeWithdrawBalance',
-          title: 'Recharge Withdraw Balance',
-          type: 'item',
-          url: '/dashboard/rechargeWithdrawBalance',
           target: false
         }
       ]
@@ -289,6 +226,47 @@ const pages = {
         }
       ]
     },
+    {
+      id: 'shipping',
+      title: 'Shipping',
+      type: 'collapse',
+      icon: icons.IconTruck,
+
+      children: [
+        {
+          id: 'shippingActivities',
+          title: 'Shipping Activity',
+          type: 'item',
+          url: '/dashboard/shippingActivities',
+          target: false
+        },
+        {
+          id: 'shippingValues',
+          title: 'Shipping Values',
+          type: 'item',
+          url: '/dashboard/shippingValues',
+          target: false
+        },
+       
+      
+        {
+          id: 'shippingOffers',
+          title: 'Shipping Offers',
+          type: 'item',
+          url: '/dashboard/shippingOffers',
+          target: false
+        },
+        
+        {
+          id: 'rechargeWithdrawBalance',
+          title: 'Recharge Withdraw Balance',
+          type: 'item',
+          url: '/dashboard/rechargeWithdrawBalance',
+          target: false
+        }
+      ]
+    },
+    
     {
       id: 'memberGifts',
       title: 'Member gifts',

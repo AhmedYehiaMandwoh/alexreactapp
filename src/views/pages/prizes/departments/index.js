@@ -31,21 +31,21 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
      { field: 'name', headerName: 'Name', width: 130 },
-    { field: 'membershipNo', headerName: 'Membership NO', width: 130 },
+    { field: 'membershipType', headerName: 'Membership Type', width: 130 },
 
  
 ];
 
 const initialRows = [
-   { id: 1, membershipNo: 'Snow', name: 'Jon' },
-  { id: 2, membershipNo: 'Lannister', name: 'Cersei' },
-  { id: 3, membershipNo: 'Lannister', name: 'Jaime' },
-  { id: 4, membershipNo: 'Stark', name: 'Arya' },
-  { id: 5, membershipNo: 'Targaryen', name: 'Daenerys' },
-  { id: 6, membershipNo: 'Melisandre', name: null },
-  { id: 7, membershipNo: 'Clifford', name: 'Ferrara' },
-  { id: 8, membershipNo: 'Frances', name: 'Rossini' },
-  { id: 9, membershipNo: 'Roxie', name: 'Harvey' },
+   { id: 1, membershipType: 'Snow', name: 'Jon' },
+  { id: 2, membershipType: 'Lannister', name: 'Cersei' },
+  { id: 3, membershipType: 'Lannister', name: 'Jaime' },
+  { id: 4, membershipType: 'Stark', name: 'Arya' },
+  { id: 5, membershipType: 'Targaryen', name: 'Daenerys' },
+  { id: 6, membershipType: 'Melisandre', name: null },
+  { id: 7, membershipType: 'Clifford', name: 'Ferrara' },
+  { id: 8, membershipType: 'Frances', name: 'Rossini' },
+  { id: 9, membershipType: 'Roxie', name: 'Harvey' },
 ];
 
 const Departments = () => {
