@@ -44,13 +44,13 @@ const Modal = () => {
                 aria-describedby="alert-dialog-description"
                 dir={direction}
             >
-                <DialogTitle id="alert-dialog-title">
+                <DialogTitle id="alert-dialog-title" sx={{marginBottom: '10px'}}>
                 {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
-                <div style={{ marginBottom: '10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
+                <div style={{ marginBottom: '10px',marginTop:'10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
                       
-                      <FormControl fullWidth sx={{width: '50%'}} variant="outlined">
+                      <FormControl fullWidth sx={{width: '100%'}} variant="outlined">
                       <InputLabel htmlFor="outlined-adornment-name" sx={{
                                   direction: direction,
                                   position: 'absolute',
@@ -63,18 +63,7 @@ const Modal = () => {
                       </InputLabel>
                       <FilledInput id="outlined-adornment-name" />
                   </FormControl>
-                  <FormControl fullWidth sx={{width: '48%' }} variant="outlined">
-                      <InputLabel htmlFor="outlined-adornment-name" sx={{
-                                  direction: direction,
-                                  position: 'absolute',
-                                  left: direction === 'rtl' ? 'auto' : 0,
-                                  right: direction === 'rtl' ? 25 : 'auto',
-                                  
-                              }}>
-                          {t('Actions')}
-                      </InputLabel>
-                      <FilledInput id="outlined-adornment-link" />
-                  </FormControl>
+                 
                      
                   </div>
                   

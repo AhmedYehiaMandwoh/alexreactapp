@@ -44,11 +44,10 @@ const ShippingOffers = Loadable(lazy(() => import('views/pages/shipping/shipping
 const EditAddShippingOffers = Loadable(lazy(() => import('views/pages/shipping/editAddShippingOffers')));
 const RechargeWithdrawBalance = Loadable(lazy(() => import('views/pages/shipping/rechargeWithdrawBalance')));
 const StoreDepartments = Loadable(lazy(() => import('views/pages/store/storeDepartments')));
-const EditAddDepartments = Loadable(lazy(() => import('views/pages/store/editAddDepartments')));
 const Products = Loadable(lazy(() => import('views/pages/store/products')));
-const EditAddProducts = Loadable(lazy(() => import('views/pages/store/editAddProducts')));
 const RechargeWithdrawBalancee = Loadable(lazy(() => import('views/pages/store/rechargeWithdrawBalance')));
 const SendingGifts = Loadable(lazy(() => import('views/pages/memberGifts/sendingGifts')));
+const  UnitActivities = Loadable(lazy(() => import('views/pages/advertisingUnits/unitActivities')));
 const Units = Loadable(lazy(() => import('views/pages/advertisingUnits/units')));
 const CreateModifyUnit = Loadable(lazy(() => import('views/pages/advertisingUnits/createModifyUnit')));
 const Accounts = Loadable(lazy(() => import('views/pages/accounts/accounts')));
@@ -67,7 +66,9 @@ const AddAgenciess = Loadable(lazy(() => import('views/pages/hostAgencies/addAge
 const AgencieReportss = Loadable(lazy(() => import('views/pages/hostAgencies/agencieReports')));
 const ShippingActivities = Loadable(lazy(() => import('views/pages/shipping/shippingActivity')));
 const StoreActivity = Loadable(lazy(() => import('views/pages/store/storeActivity')));
-
+const GiftsActivity = Loadable(lazy(() => import('views/pages/memberGifts/giftsActivity')));
+const GiftReports = Loadable(lazy(() => import('views/pages/memberGifts/giftReports')));
+const ActivityReports = Loadable(lazy(() => import('views/pages/activities/activityReports')));
 
 
 
@@ -177,6 +178,11 @@ const MainRoutes = {
           element: <MemberGifts />
         },
         {
+          path: 'activityReports',
+          element: <ActivityReports />
+        },
+        
+        {
           path: 'advertisingUnits',
           element: <AdvertisingUnits />
         },
@@ -262,6 +268,10 @@ const MainRoutes = {
           element: <DepartmentsPrizes />
         },
         {
+          path: 'unitActivities',
+          element: <UnitActivities />
+        },
+        {
           path: 'prize',
           element: <Prize />
         },
@@ -286,7 +296,7 @@ const MainRoutes = {
           element: <UserMessages />
         },
         {
-          path: 'welcomeMessage',
+          path: 'welcomeMessages',
           element: <WelcomeMessages />
         },
         {
@@ -317,18 +327,12 @@ const MainRoutes = {
           path: 'storeDepartments',
           element: <StoreDepartments />
         },
-        {
-          path: 'editAddDepartments',
-          element: <EditAddDepartments />
-        },
+        
         {
           path: 'products',
           element: <Products />
         },
-        {
-          path: 'editAddProducts',
-          element: <EditAddProducts />
-        },
+        
         {
           path: 'rechargeWithdrawBalancee',
           element: <RechargeWithdrawBalancee />
@@ -336,6 +340,14 @@ const MainRoutes = {
         {
           path: 'sendingGifts',
           element: <SendingGifts />
+        },
+        {
+          path: 'giftsActivity',
+          element: <GiftsActivity />
+        },
+        {
+          path: 'giftReports',
+          element: <GiftReports />
         },
         {
           path: 'units',

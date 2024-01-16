@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../../pagesComponenets/Table';
-import Modal from './Modal';
+
 
 import { useTranslation } from 'react-i18next';
 
@@ -82,13 +82,11 @@ const Emoji = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Symbols')}</h2>
+              <h2 className="main_title_table">{t('Gift Reports')}</h2>
             </Item>
           </Grid>
           <Grid >
-            <Item>
-              <Modal />
-            </Item>
+            
           </Grid>
         </Grid>
         <Table

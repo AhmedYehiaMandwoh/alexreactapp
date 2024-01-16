@@ -143,30 +143,55 @@ const pages = {
         }
       ]
     },
+    // {
+    //   id: 'messages',
+    //   title: 'Messages',
+    //   type: 'collapse',
+    //   icon: icons.IconMessage,
+
+    //   children: [
+
+    //     {
+    //       id: 'userMessages',
+    //       title: 'User Messages',
+    //       type: 'item',
+    //       url: '/dashboard/userMessages',
+    //       target: false
+    //     },
+    //     {
+    //       id: 'welcomeMessages',
+    //       title: 'Welcome Messages',
+    //       type: 'item',
+    //       url: '/dashboard/welcomeMessages',
+    //       target: false
+    //     }
+    //   ]
+    // },
     {
       id: 'messages',
       title: 'Messages',
       type: 'collapse',
       icon: icons.IconMessage,
-
       children: [
-
-        {
-          id: 'userMessages',
-          title: 'User Messages',
-          type: 'item',
-          url: '/dashboard/userMessages',
-          target: false
-        },
         {
           id: 'welcomeMessages',
           title: 'Welcome Messages',
           type: 'item',
           url: '/dashboard/welcomeMessages',
-          target: false
+          target: false,
+          children: [
+            {
+              id: 'userMessages',
+              title: 'User Messages',
+              type: 'item',
+              url: '/dashboard/userMessages',
+              target: false
+            }
+          ]
         }
       ]
-    },
+    }
+,    
     {
       id: 'blocking',
       title: 'Blocking',
@@ -205,13 +230,7 @@ const pages = {
           url: '/dashboard/shippingValues',
           target: false
         },
-        {
-          id: 'editAddShippingValue',
-          title: 'Edit Add Shipping Value',
-          type: 'item',
-          url: '/dashboard/editAddShippingValue',
-          target: false
-        },
+       
       
         {
           id: 'shippingOffers',
@@ -220,13 +239,7 @@ const pages = {
           url: '/dashboard/shippingOffers',
           target: false
         },
-        {
-          id: 'editAddShippingOffers',
-          title: 'Edit Add Shipping Offers',
-          type: 'item',
-          url: '/dashboard/editAddShippingOffers',
-          target: false
-        },
+        
         {
           id: 'rechargeWithdrawBalance',
           title: 'Recharge Withdraw Balance',
@@ -258,13 +271,7 @@ const pages = {
           url: '/dashboard/storeActivity',
           target: false
         },
-        {
-          id: 'editAddDepartments',
-          title: 'Edit Add Departments',
-          type: 'item',
-          url: '/dashboard/editAddDepartments',
-          target: false
-        },
+       
         {
           id: 'products',
           title: 'Products',
@@ -272,13 +279,7 @@ const pages = {
           url: '/dashboard/products',
           target: false
         },
-        {
-          id: 'editAddProducts',
-          title: 'Edit Add Products',
-          type: 'item',
-          url: '/dashboard/editAddProducts',
-          target: false
-        },
+  
         {
           id: 'rechargeWithdrawBalancee',
           title: 'Recharge Withdraw Balance',
@@ -302,7 +303,22 @@ const pages = {
           type: 'item',
           url: '/dashboard/sendingGifts',
           target: false
+        },
+        {
+          id: 'giftsActivity',
+          title: 'Gifts Activity',
+          type: 'item',
+          url: '/dashboard/giftsActivity',
+          target: false
+        },
+        {
+          id: 'giftReports',
+          title: 'Gift Reports',
+          type: 'item',
+          url: '/dashboard/giftReports',
+          target: false
         }
+
       ]
     },
     {
@@ -321,12 +337,13 @@ const pages = {
           target: false
         },
         {
-          id: 'createModifyUnit',
-          title: 'Create Modify Unit',
+          id: 'unitActivities',
+          title: 'Unit Activities',
           type: 'item',
-          url: '/dashboard/createModifyUnit',
+          url: '/dashboard/unitActivities',
           target: false
-        }
+        },
+       
       ]
     },
     {
@@ -344,13 +361,7 @@ const pages = {
           url: '/dashboard/accounts',
           target: false
         },
-        {
-          id: 'accountsEditing',
-          title: 'Accounts Editing',
-          type: 'item',
-          url: '/dashboard/accountsEditing',
-          target: false
-        },
+     
         {
           id: 'accountReport',
           title: 'Account Report',
@@ -370,9 +381,16 @@ const pages = {
 
         {
           id: 'addEditingActivities',
-          title: 'Add Editing Activities',
+          title: 'Activities',
           type: 'item',
           url: '/dashboard/addEditingActivities',
+          target: false
+        },
+        {
+          id: 'activityReports',
+          title: 'Activity Reports',
+          type: 'item',
+          url: '/dashboard/activityReports',
           target: false
         }
       ]
@@ -416,13 +434,7 @@ const pages = {
           url: '/dashboard/wallpapers',
           target: false
         },
-        {
-          id: 'addEditingWallpapers',
-          title: 'Add Editing Wallpapers',
-          type: 'item',
-          url: '/dashboard/addEditingWallpapers',
-          target: false
-        }
+      
       ]
     },
 

@@ -1,7 +1,8 @@
 
 // material-ui
-import React from 'react'
-
+import {React,useState} from 'react'
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
 import Box from '@mui/material/Box';
@@ -29,26 +30,43 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'prizeName', headerName: 'Prize Name', width: 130 },
-  { field: 'actions', headerName: 'Actions', width: 130 },
+  
 
  
 ];
 
-const rows = [
-  { id: 1, actions: 'Snow', prizeName: 'Jon', age: 35 },
-  { id: 2, actions: 'Lannister', prizeName: 'Cersei', age: 42 },
-  { id: 3, actions: 'Lannister', prizeName: 'Jaime', age: 45 },
-  { id: 4, actions: 'Stark', prizeName: 'Arya', age: 16 },
-  { id: 5, actions: 'Targaryen', prizeName: 'Daenerys', age: null },
-  { id: 6, actions: 'Melisandre', prizeName: null, age: 150 },
-  { id: 7, actions: 'Clifford', prizeName: 'Ferrara', age: 44 },
-  { id: 8, actions: 'Frances', prizeName: 'Rossini', age: 36 },
-  { id: 9, actions: 'Roxie', prizeName: 'Harvey', age: 65 },
+const initialRows = [
+  { id: 1, prizeName: 'Jon', age: 35 },
+  { id: 2, prizeName: 'Cersei', age: 42 },
+  { id: 3,  prizeName: 'Jaime', age: 45 },
+  { id: 4,  prizeName: 'Arya', age: 16 },
+  { id: 5,  prizeName: 'Daenerys', age: null },
+  { id: 6,  prizeName: null, age: 150 },
+  { id: 7,  prizeName: 'Ferrara', age: 44 },
+  { id: 8,  prizeName: 'Rossini', age: 36 },
+  { id: 9,  prizeName: 'Harvey', age: 65 },
 ];
 
 const Emoji = () => {
   const { t } = useTranslation();
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [rows, setRows] = useState(initialRows);
+  const handleEdit = (rowData) => {
+    // Handle edit action here, e.g., open a modal for editing
+     console.log('Edit:', rowData);
+    navigate("/dashboard/createARoom");
+  };
 
+  const handleDelete = (rowData) => {
+    // Handle delete action here, e.g., show a confirmation dialog
+    console.log('Delete:', rowData);
+
+    // Update the state to remove the deleted item
+    setRows((prevRows) => prevRows.filter((row) => row.id !== rowData.id));
+  };
+  const handleRowSelect = (rowId) => {
+    setSelectedRow(rowId);
+  };
   // Open And Close Modal 
 
   return (
@@ -66,7 +84,16 @@ const Emoji = () => {
             </Item>
           </Grid>
         </Grid>
-        <Table rows={rows} columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))} />
+        <Table
+          rows={rows}
+          columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))}
+          selectedRow={selectedRow}
+          onRowSelect={handleRowSelect}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          editIcon={<EditIcon />}
+          deleteIcon={<DeleteIcon />}
+        />
 
       </Box>
     </MainCard>

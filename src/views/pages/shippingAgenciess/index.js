@@ -70,7 +70,7 @@ const ShippingAgencies = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Shipping Agencies')}</h2>
+              <h2 className="main_title_table">{t('Agencies')}</h2>
             </Item>
           </Grid>
           <Grid >

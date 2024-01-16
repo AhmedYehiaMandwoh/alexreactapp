@@ -50,16 +50,16 @@ const Rooms = () => {
          
         </Grid>
 
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-    <div>
-        <FormControl fullWidth sx={{ m: 1, justifyContent: i18n.language === 'ar' ? 'flex-start' : 'flex-start' }} variant="filled">
+        {/* <Box sx={{ display: 'flex', flexWrap: 'wrap' }}> */}
+    <div style={{ display: 'flex', justifyContent:'space-around' }}> 
+        <FormControl fullWidth sx={{ justifyContent: i18n.language === 'ar' ? 'flex-start' : 'flex-start' ,width:'48%'}} variant="filled">
             <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>
                 {t('Name')}
             </InputLabel>
             <FilledInput id="filled-adornment-name" />
         </FormControl>
 
-        <FormControl fullWidth sx={{ m: 1 }} variant="filled">
+        <FormControl fullWidth sx={{ width:'48%' }} variant="filled">
             <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>
                 {t('Upload Image')}
             </InputLabel>
@@ -69,17 +69,19 @@ const Rooms = () => {
                 startAdornment={<InputAdornment position="start">📷</InputAdornment>}
             />
         </FormControl>
+        </div>
+        <div style={{ display: 'flex',  }}> 
         <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Room advertisement')}</InputLabel>
+              <InputLabel htmlFor="filled-adornment-amount" sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto',width:'33%' }}>{t('Room advertisement')}</InputLabel>
               <FilledInput id="filled-adornment-ad"  />
             </FormControl>
 
             <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-amount"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Room type')}</InputLabel>
+              <InputLabel htmlFor="filled-adornment-amount"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' ,width:'33%'}}>{t('Room type')}</InputLabel>
               <FilledInput id="filled-adornment-room" />
             </FormControl>
             <FormControl fullWidth sx={{ m: 1 }} variant="filled">
-              <InputLabel htmlFor="filled-adornment-password"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' }}>{t('Password')}</InputLabel>
+              <InputLabel htmlFor="filled-adornment-password"  sx={{ direction: i18n.language === 'ar' ? 'rtl' : 'ltr', position: 'absolute', left: i18n.language === 'ar' ? 'auto' : 0, right: i18n.language === 'ar' ? 25 : 'auto' ,width:'33%'}}>{t('Password')}</InputLabel>
               <FilledInput
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
@@ -96,10 +98,8 @@ const Rooms = () => {
                 }
               />
             </FormControl>
-
-        {/* Other FormControl components... */}
-
-    </div>
+            </div>
+      
 </Box>
 
         <Grid >
@@ -112,7 +112,7 @@ const Rooms = () => {
         </AnimateButton>
             </Item>
           </Grid>
-      </Box>
+      {/* </Box> */}
     </MainCard>
   );
 };

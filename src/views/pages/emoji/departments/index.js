@@ -1,7 +1,8 @@
 
 // material-ui
-import React from 'react'
-
+import {React,useState} from 'react'
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
 import Box from '@mui/material/Box';
@@ -29,26 +30,44 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 130 },
-  { field: 'membershipNo', headerName: 'Membership NO', width: 130 },
+  { field: 'membershipType', headerName: 'Membership Type', width: 130 },
 
  
 ];
 
-const rows = [
-  { id: 1, membershipNo: 'Snow', name: 'Jon' },
-  { id: 2, membershipNo: 'Lannister', name: 'Cersei' },
-  { id: 3, membershipNo: 'Lannister', name: 'Jaime' },
-  { id: 4, membershipNo: 'Stark', name: 'Arya' },
-  { id: 5, membershipNo: 'Targaryen', name: 'Daenerys' },
-  { id: 6, membershipNo: 'Melisandre', name: null },
-  { id: 7, membershipNo: 'Clifford', name: 'Ferrara' },
-  { id: 8, membershipNo: 'Frances', name: 'Rossini' },
-  { id: 9, membershipNo: 'Roxie', name: 'Harvey' },
+const initialRows = [
+  { id: 1, membershipType: 'Snow', name: 'Jon' },
+  { id: 2, membershipType: 'Lannister', name: 'Cersei' },
+  { id: 3, membershipType: 'Lannister', name: 'Jaime' },
+  { id: 4, membershipType: 'Stark', name: 'Arya' },
+  { id: 5, membershipType: 'Targaryen', name: 'Daenerys' },
+  { id: 6, membershipType: 'Melisandre', name: null },
+  { id: 7, membershipType: 'Clifford', name: 'Ferrara' },
+  { id: 8, membershipType: 'Frances', name: 'Rossini' },
+  { id: 9, membershipType: 'Roxie', name: 'Harvey' },
 ];
 
 const Departments = () => {
   const { t } = useTranslation();
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [rows, setRows] = useState(initialRows);
+  const handleEdit = (rowData) => {
+    // Handle edit action here, e.g., open a modal for editing
+     console.log('Edit:', rowData);
+    navigate("/dashboard/createARoom");
+  };
 
+  const handleDelete = (rowData) => {
+    // Handle delete action here, e.g., show a confirmation dialog
+    console.log('Delete:', rowData);
+
+    // Update the state to remove the deleted item
+    setRows((prevRows) => prevRows.filter((row) => row.id !== rowData.id));
+  };
+  const handleRowSelect = (rowId) => {
+    setSelectedRow(rowId);
+  };
+  // Open And Close Modal 
   // Open And Close Modal 
 
   return (
@@ -67,7 +86,16 @@ const Departments = () => {
           </Grid>
         </Grid>
        
-        <Table rows={rows} columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))} />
+        <Table
+          rows={rows}
+          columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))}
+          selectedRow={selectedRow}
+          onRowSelect={handleRowSelect}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          editIcon={<EditIcon />}
+          deleteIcon={<DeleteIcon />}
+        />
 
       </Box>
     </MainCard>

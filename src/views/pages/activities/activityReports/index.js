@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 
 
 import Table from '../../pagesComponenets/Table';
-import Modal from './Modal';
+
 
 import { useTranslation } from 'react-i18next';
 
@@ -30,32 +30,26 @@ const Item = styled(Paper)(({ theme }) => ({
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 130 },
-  { field: 'department', headerName: 'Departments', width: 130 },
-  {
-    field: 'price',
-    headerName: 'Price',
-    type: 'number',
-    width: 90,
-  },
+  { field: 'image', headerName: 'Image', width: 130 },
+  { field: 'activityLink', headerName: 'Activity Link', width: 130 },
 
+ 
 ];
 
 const initialRows = [
-  { id: 1, name: 'Snow', department: 'Jon', price: 35 },
-  { id: 2, name: 'Lannister', department: 'Cersei', price: 42 },
-  { id: 3, name: 'Lannister', department: 'Jaime', price: 45 },
-  { id: 4, name: 'Stark', department: 'Arya', price: 16 },
-  { id: 5, name: 'Targaryen', department: 'Daenerys', price: null },
-  { id: 6, name: 'Melisandre', department: null, price: 150 },
-  { id: 7, name: 'Clifford', department: 'Ferrara', price: 44 },
-  { id: 8, name: 'Frances', department: 'Rossini', price: 36 },
-  { id: 9, name: 'Roxie', department: 'Harvey', price: 65 },
+  { id: 1, image: 'Snow', name: 'Jon',activityLink:'' },
+  { id: 2, image: 'Lannister', name: 'Cersei',activityLink:'' },
+  { id: 3, image: 'Lannister', name: 'Jaime',activityLink:'' },
+  { id: 4, image: 'Stark', name: 'Arya' ,activityLink:''},
+  { id: 5, image: 'Targaryen', name: 'Daenerys' ,activityLink:''},
+  { id: 6, image: 'Melisandre', name: null,activityLink:'' },
+  { id: 7, image: 'Clifford', name: 'Ferrara' ,activityLink:''},
+  { id: 8, image: 'Frances', name: 'Rossini',activityLink:'' },
+  { id: 9, image: 'Roxie', name: 'Harvey' ,activityLink:''},
 ];
 
-const Emoji = () => {
+const Departments = () => {
   const { t } = useTranslation();
-
-  // Open And Close Modal 
   const [selectedRow, setSelectedRow] = useState(null);
   const [rows, setRows] = useState(initialRows);
   const handleEdit = (rowData) => {
@@ -75,6 +69,7 @@ const Emoji = () => {
     setSelectedRow(rowId);
   };
   // Open And Close Modal 
+  // Open And Close Modal 
 
   return (
     <MainCard>
@@ -82,15 +77,14 @@ const Emoji = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Symbols')}</h2>
+              <h2 className="main_title_table">{t('Activity Reports')}</h2>
             </Item>
           </Grid>
           <Grid >
-            <Item>
-              <Modal />
-            </Item>
+           
           </Grid>
         </Grid>
+       
         <Table
           rows={rows}
           columns={columns.map(col => ({ ...col, headerName: t(col.headerName) }))}
@@ -107,4 +101,4 @@ const Emoji = () => {
   )
 };
 
-export default Emoji;
+export default Departments;

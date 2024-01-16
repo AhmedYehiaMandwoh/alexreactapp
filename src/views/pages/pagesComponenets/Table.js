@@ -8,7 +8,7 @@ const Table = ({ rows, columns, onEdit, onDelete, editIcon, deleteIcon }) => {
     ...columns,
     {
       field: 'action',
-      headerName: '',
+      headerName: 'Actions',
       width: 120,
       renderCell: (params) => (
         <>

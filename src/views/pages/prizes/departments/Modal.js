@@ -43,11 +43,11 @@ const Modal = () => {
                 aria-describedby="alert-dialog-description"
                 dir={direction}
             >
-                <DialogTitle id="alert-dialog-title">
+                <DialogTitle id="alert-dialog-title" sx={{marginBottom:'10px'}}>
                 {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
-                <div style={{ marginBottom: '10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
+                <div style={{ marginBottom: '10px',marginTop:'10px', width: '500px',display:'flex' ,justifyContent:'space-between' }}>
                       
                       <FormControl fullWidth sx={{width: '50%'}} variant="outlined">
                       <InputLabel htmlFor="outlined-adornment-name" sx={{

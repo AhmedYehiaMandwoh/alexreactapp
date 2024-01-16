@@ -1,22 +1,22 @@
+
+
+
 import { React, useState } from 'react'
+import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+
+import InputLabel from '@mui/material/InputLabel';
+import FilledInput from '@mui/material/FilledInput';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import AnimateButton from 'ui-component/extended/AnimateButton';
 import { useTranslation } from 'react-i18next';
-const data = [
-    { label: 'The Shawshank Redemption', year: 1994 },
-    { label: 'The Godfather', year: 1972 },
-    { label: 'The Godfather: Part II', year: 1974 },
 
-];
 // Add and Update functions
 const Modal = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
 
     // open = false
@@ -27,6 +27,7 @@ const Modal = () => {
     const handleClose = () => {
         setOpen(false);
     };
+    const direction = i18n.language === 'ar' ? 'rtl' : 'ltr';
 
     return (
         <>
@@ -42,24 +43,42 @@ const Modal = () => {
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                dir={direction}
             >
-                <DialogTitle id="alert-dialog-title">
-                    {"Use Google's location service?"}
+                <DialogTitle id="alert-dialog-title" sx={{marginBottom:'10px'}}>
+                {t('Add new')}
                 </DialogTitle>
                 <DialogContent>
-                    <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                        options={data}
-                        renderInput={(params) => <TextField {...params} label="Movie" />}
-                    />
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                <div style={{ marginBottom: '10px',marginTop:'10px' ,width: '500px',display:'flex' ,justifyContent:'space-between' }}>
+                      
+                    
+                  <FormControl fullWidth sx={{width: '100%' }} variant="outlined">
+                      <InputLabel htmlFor="outlined-adornment-name" sx={{
+                                  direction: direction,
+                                  position: 'absolute',
+                                  left: direction === 'rtl' ? 'auto' : 0,
+                                  right: direction === 'rtl' ? 25 : 'auto',
+                                  
+                              }}>
+                          {t('Membership Type')}
+                      </InputLabel>
+                      <FilledInput id="outlined-adornment-link" />
+                  </FormControl>
+                     
+                  </div>
+                  
+               
+                  
+                  
+                    
+                    
+                    
 
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Disagree</Button>
+                    <Button onClick={handleClose}>{t('Cancel')}</Button>
                     <Button onClick={handleClose} autoFocus>
-                        Agree
+                    {t('Submit')}
                     </Button>
                 </DialogActions>
             </Dialog>
