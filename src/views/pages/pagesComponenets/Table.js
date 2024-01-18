@@ -1,6 +1,4 @@
 
-
-
 import { DataGrid } from '@mui/x-data-grid';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -78,4 +76,4 @@ const Table = ({ rows, columns, onEdit, onDelete, editIcon, deleteIcon }) => {
   );
 };
 
-export default Table;
+ export default Table;

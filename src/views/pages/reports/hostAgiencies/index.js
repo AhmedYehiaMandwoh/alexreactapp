@@ -12,8 +12,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
 
-import Table from '../pagesComponenets/Table';
-import Modal from './Modal';
+import Table from '../../pagesComponenets/Table';
 
 import { useTranslation } from 'react-i18next';
 
@@ -59,7 +58,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-const Games = () => {
+const Prizes = () => {
   const { t } = useTranslation();
 
   // Open And Close Modal 
@@ -70,13 +69,11 @@ const Games = () => {
         <Grid container rowSpacing={1} justifyContent="space-between" alignItems="center">
           <Grid>
             <Item>
-              <h2 className="main_title_table">{t('Games')}</h2>
+              <h2 className="main_title_table">{t('Host Agiencies')}</h2>
             </Item>
           </Grid>
           <Grid >
-            <Item>
-              <Modal />
-            </Item>
+            
           </Grid>
         </Grid>
         <Table rows={rows} columns={columns} />
@@ -86,4 +83,4 @@ const Games = () => {
   )
 };
 
-export default Games;
+export default Prizes;

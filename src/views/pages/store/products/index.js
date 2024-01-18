@@ -72,7 +72,7 @@ const Store = () => {
   const handleEdit = (rowData) => {
     // Handle edit action here, e.g., open a modal for editing
      console.log('Edit:', rowData);
-    navigate("/dashboard/createARoom");
+   
   };
 
   const handleDelete = (rowData) => {

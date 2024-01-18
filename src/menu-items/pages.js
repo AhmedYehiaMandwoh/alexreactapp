@@ -152,7 +152,7 @@ const pages = {
       children: [
         {
           id: 'userMessages',
-          title: 'User Messages',
+          title: 'Messages',
           type: 'collapse',
           url: '/dashboard/userMessages',
           target: false,
@@ -162,6 +162,13 @@ const pages = {
               title: 'Welcome Messages',
               type: 'item',
               url: '/dashboard/welcomeMessages',
+              target: false
+            },
+            {
+              id: 'userMessages',
+              title: 'User Messages',
+              type: 'item',
+              url: '/dashboard/userMessages',
               target: false
             }
           ]
@@ -505,6 +512,13 @@ const pages = {
           type: 'item',
           url: '/dashboard/paymentGateways',
           target: false
+        },
+        {
+          id: 'paymentHistory',
+          title: 'Payment History',
+          type: 'item',
+          url: '/dashboard/paymentHistory',
+          target: false
         }
       ]
     },
@@ -522,6 +536,13 @@ const pages = {
           type: 'item',
           url: '/dashboard/games',
           target: false
+        },
+        {
+          id: 'gameActivity',
+          title: 'Game Activity',
+          type: 'item',
+          url: '/dashboard/gameActivity',
+          target: false
         }
       ]
     },
@@ -534,10 +555,17 @@ const pages = {
       children: [
 
         {
-          id: 'supervision',
-          title: 'Supervision',
+          id: 'supervisor',
+          title: 'Supervisor',
           type: 'item',
-          url: '/dashboard/supervision',
+          url: '/dashboard/supervisor',
+          target: false
+        },
+        {
+          id: 'supervisorReports',
+          title: 'Supervisor Reports',
+          type: 'item',
+          url: '/dashboard/supervisorReports',
           target: false
         }
       ]
@@ -551,12 +579,64 @@ const pages = {
       children: [
 
         {
-          id: 'reports',
-          title: 'Reports',
+          id: 'newusers',
+          title: 'New Users',
           type: 'item',
-          url: '/dashboard/reports',
+          url: '/dashboard/newusers',
+          target: false
+        },
+        {
+          id: 'payments',
+          title: 'Payments',
+          type: 'item',
+          url: '/dashboard/payments',
+          target: false
+        },
+      
+       
+        {
+          id: 'roomReports',
+          title: 'Room Reports',
+          type: 'item',
+          url: '/dashboard/roomReports',
+          target: false
+        },
+        {
+          id: 'shippingAgiencies',
+          title: 'Shipping Agiencies',
+          type: 'item',
+          url: '/dashboard/shippingAgiencies',
+          target: false
+        },
+        {
+          id: 'hostAgiencies',
+          title: 'Host Agiencies',
+          type: 'item',
+          url: '/dashboard/hostAgiencies',
+          target: false
+        },
+        {
+          id: 'hostReport',
+          title: 'Host Report',
+          type: 'item',
+          url: '/dashboard/hostReport',
+          target: false
+        },
+        {
+          id: 'supervisor',
+          title: 'Supervisor',
+          type: 'item',
+          url: '/dashboard/supervisor',
+          target: false
+        },
+        {
+          id: 'advertisementReport',
+          title: 'Advertisement Report',
+          type: 'item',
+          url: '/dashboard/advertisementReport',
           target: false
         }
+      
       ]
     },
     {
@@ -568,12 +648,47 @@ const pages = {
       children: [
 
         {
-          id: 'settings',
-          title: 'Settings',
+          id: 'activateMultiplicity',
+          title: 'Activate Multiplicity',
           type: 'item',
-          url: '/dashboard/settings',
+          url: '/dashboard/activateMultiplicity',
           target: false
-        }
+        },
+        {
+          id: 'bannedCountries',
+          title: 'Banned Countries',
+          type: 'item',
+          url: '/dashboard/bannedCountries',
+          target: false
+        },
+        {
+          id: 'changeAdvertisingCodes',
+          title: 'Change Advertising Codes',
+          type: 'item',
+          url: '/dashboard/changeAdvertisingCodes',
+          target: false
+        },
+        {
+          id: 'language',
+          title: 'Language',
+          type: 'item',
+          url: '/dashboard/language',
+          target: false
+        },
+        {
+          id: 'prohibitedWords',
+          title: 'Prohibited Words',
+          type: 'item',
+          url: '/dashboard/prohibitedWords',
+          target: false
+        },
+        {
+          id: 'backup',
+          title: 'Backup',
+          type: 'item',
+          url: '/dashboard/backup',
+          target: false
+        },
       ]
     },
     {

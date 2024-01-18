@@ -21,10 +21,13 @@ const Roomwallpapers = Loadable(lazy(() => import('views/pages/roomwallpapers'))
 const Notifications = Loadable(lazy(() => import('views/pages/notifications')));
 const ShippingAgenciess = Loadable(lazy(() => import('views/pages/shippingAgenciess')));
 const HostAgencies = Loadable(lazy(() => import('views/pages/hostAgencies')));
-const PaymentGateways = Loadable(lazy(() => import('views/pages/paymentGateways')));
-const Games = Loadable(lazy(() => import('views/pages/games')));
-const Supervision = Loadable(lazy(() => import('views/pages/supervision')));
-const Reports = Loadable(lazy(() => import('views/pages/reports')));
+const PaymentGateways = Loadable(lazy(() => import('views/pages/paymentGateways/paymentGeteway')));
+const PaymentHistory = Loadable(lazy(() => import('views/pages/paymentGateways/paymentHistory')));
+const Games = Loadable(lazy(() => import('views/pages/games/games')));
+const GameActivity = Loadable(lazy(() => import('views/pages/games/gameActivity')));
+const Supervision = Loadable(lazy(() => import('views/pages/supervision/supervisor')));
+const SupervisorReports = Loadable(lazy(() => import('views/pages/supervision/supervisorReports')));
+const Reports = Loadable(lazy(() => import('views/pages/reports/newUsers')));
 const Settings = Loadable(lazy(() => import('views/pages/settings')));
 const Departments = Loadable(lazy(() => import('views/pages/emoji/departments')));
 const Symbols = Loadable(lazy(() => import('views/pages/emoji/symbols')));
@@ -69,11 +72,20 @@ const StoreActivity = Loadable(lazy(() => import('views/pages/store/storeActivit
 const GiftsActivity = Loadable(lazy(() => import('views/pages/memberGifts/giftsActivity')));
 const GiftReports = Loadable(lazy(() => import('views/pages/memberGifts/giftReports')));
 const ActivityReports = Loadable(lazy(() => import('views/pages/activities/activityReports')));
-
-
-
-
-
+const Payments = Loadable(lazy(() => import('views/pages/reports/payments')));
+const RoomReports = Loadable(lazy(() => import('views/pages/reports/roomReports')));
+const ShippingAgiencies = Loadable(lazy(() => import('views/pages/reports/shippingAgiencies')));
+const HostAgiencies = Loadable(lazy(() => import('views/pages/reports/hostAgiencies')));
+const HostReport = Loadable(lazy(() => import('views/pages/reports/hostReport')));
+const Supervisor = Loadable(lazy(() => import('views/pages/reports/supervisor')));
+const AdvertisementReport = Loadable(lazy(() => import('views/pages/reports/advertisementReport')));
+    
+const ActivateMultiplicity = Loadable(lazy(() => import('views/pages/settings/activateMultiplicity')));
+const  BannedCountries = Loadable(lazy(() => import('views/pages/settings/bannedCountries')));
+const ChangeAdvertisingCodes = Loadable(lazy(() => import('views/pages/settings/changeAdvertisingCodes')));
+const Language = Loadable(lazy(() => import('views/pages/settings/language')));
+const ProhibitedWords = Loadable(lazy(() => import('views/pages/settings/prohibitedWords')));
+const Backup = Loadable(lazy(() => import('views/pages/settings/backup')));
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
@@ -198,6 +210,52 @@ const MainRoutes = {
           path: 'wallpapers',
           element: <Wallpapers />
         },
+        
+{
+  path: 'advertisementReport',
+  element: <AdvertisementReport />
+},
+{
+  path: 'supervisor',
+  element: <Supervisor />
+},
+{
+  path: 'activateMultiplicity',
+  element: <ActivateMultiplicity />
+},
+{
+  path: 'bannedCountries',
+  element: <BannedCountries />
+},
+{
+  path: 'changeAdvertisingCodes',
+  element: <ChangeAdvertisingCodes />
+},
+{
+  path: 'language',
+  element: <Language />
+},
+{
+  path: 'backup',
+  element: <Backup />
+},
+{
+  path: 'prohibitedWords',
+  element: <ProhibitedWords />
+},
+{
+  path: 'shippingAgiencies',
+  element: <ShippingAgiencies />
+},
+
+{
+  path: 'hostReport',
+  element: <HostReport />
+},
+{
+  path: 'hostAgiencies',
+  element: <HostAgiencies />
+},
         {
           path: 'addEditingWallpapers',
           element: <AddEditingWallpapers />
@@ -236,15 +294,30 @@ const MainRoutes = {
           element: <PaymentGateways />
         },
         {
+          path: 'paymentHistory',
+          element: <PaymentHistory />
+        },
+        {
           path: 'games',
           element: <Games />
         },
         {
-          path: 'supervision',
+          path: 'gameActivity',
+          element: <GameActivity />
+        },
+        
+        {
+          path: 'supervisor',
           element: <Supervision />
+          
         },
         {
-          path: 'reports',
+          path: 'supervisorReports',
+          element: <SupervisorReports />
+          
+        },
+        {
+          path: 'newUsers',
           element: <Reports />
         },
         {
@@ -258,6 +331,14 @@ const MainRoutes = {
         {
           path: 'symbols',
           element: <Symbols />
+        },
+        {
+          path: 'payments',
+          element: <Payments />
+        },
+        {
+          path: 'roomReports',
+          element: <RoomReports />
         },
         {
           path: 'allEmoji',
